@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23157A41'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<title>Финзарядка — вход и карта трека «Инвестиции»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F4F6F8; font-family: 'Manrope', system-ui, sans-serif; color: #14213D">
+
+<sc-if value="{{inSetup}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{back}}" aria-label="Назад" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div role="progressbar" aria-label="Настройка" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{setupNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{setupPct}}; background: #157A41; border-radius: 6px; transition: width .35s ease"></div></div>
+<div style="flex: none; width: 44px"></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isWelcome}}" hint-placeholder-val="{{true}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 24px 20px; display: flex; flex-direction: column; gap: 20px">
+<div aria-hidden="true" style="width: 80px; height: 80px; border-radius: 24px; background: #157A41; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M6 16v-2M10 16v-4M14 16V9M18 16V5"></path></svg></div>
+<div>
+<div style="font-size: 17px; font-weight: 800; color: #157A41">Финзарядка</div>
+<h1 style="margin: 6px 0 0; font-size: 32px; line-height: 1.15; font-weight: 800; letter-spacing: -0.01em">Инвестиции по 5 минут в день</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Ситуации из жизни, а не лекции</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Сначала пробуешь сам, потом разбираешь на ползунках</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Без регистрации: прогресс хранится на телефоне</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Ничего не продаём и не говорим «купи X»</span></div>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<button type="button" onClick="{{go1}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Начать</button>
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Сразу к карте трека</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isGoal}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">Зачем ты здесь?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.45; color: #4B5563">От ответа зависит, с чего начнём. Поменять можно в любой момент.</p>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{goals}}" as="g" hint-placeholder-count="4">
+<button type="button" onClick="{{g.pick}}" aria-pressed="{{g.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{g.border}}; background: {{g.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 800">{{g.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563">{{g.sub}}</span></button>
+</sc-for>
+</div>
+<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE3EA; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 16px; line-height: 1.45; color: #374151"><b>Нужно другое?</b> Вклады, кредиты и налоги появятся позже.</div>
+<sc-if value="{{noWish}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{makeWish}}" style="align-self: flex-start; height: 44px; padding: 0 16px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">Хочу узнать первым</button></sc-if>
+<sc-if value="{{hasWish}}" hint-placeholder-val="{{false}}"><div role="status" style="font-size: 16px; font-weight: 700; color: #157A41">Записали. Сообщим, когда появится.</div></sc-if>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{goalChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{go2}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
+<sc-if value="{{goalOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isMins}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">Сколько времени в день?</h2>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{minsOptions}}" as="o" hint-placeholder-count="3">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 19px; font-weight: 800">{{o.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563; text-align: right">{{o.sub}}</span></button>
+</sc-for>
+</div>
+<div style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; font-size: 16px; line-height: 1.45">Напоминаем не чаще раза в день. Пропустил день — серию можно заморозить, а в выходные она не сгорает.</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{minsChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{afterMins}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
+<sc-if value="{{minsOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isOffer}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div aria-hidden="true" style="width: 64px; height: 64px; border-radius: 18px; background: #E8EEFD; color: #1D4ED8; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"></path><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"></path></svg></div>
+<h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">Проверим, что ты уже знаешь</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5">5 вопросов, около 2 минут. Если раздел тебе знаком, начнёшь сразу со следующего — без долгих уроков о том, что и так понятно.</p>
+<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; line-height: 1.45">Не уверен — жми «Не знаю». Так тест точнее, а угаданный ответ только отправит тебя мимо нужных уроков.</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<button type="button" onClick="{{startTest}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Пройти тест</button>
+<button type="button" onClick="{{skipTest}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Пропустить, начну с первого урока</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isTest}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Вопрос {{test.num}} из 5 · {{test.section}}</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.3; font-weight: 800">{{test.text}}</h2>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{test.options}}" as="o" hint-placeholder-count="4">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 54px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer">{{o.text}}</button>
+</sc-for>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{test.answered}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{test.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">{{test.nextLabel}}</button></sc-if>
+<sc-if value="{{test.open}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери ответ</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isResult}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">{{result.title}}</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5">{{result.text}}</p>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 6px 16px; display: flex; flex-direction: column">
+<sc-for list="{{result.rows}}" as="r" hint-placeholder-count="3">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid {{r.line}}"><span style="font-size: 17px; font-weight: 700">{{r.title}}</span><span style="flex: none; padding: 4px 10px; border-radius: 999px; background: {{r.bg}}; color: {{r.ink}}; font-size: 15px; font-weight: 800">{{r.verdict}}</span></div>
+</sc-for>
+</div>
+<div style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; font-size: 16px; line-height: 1.45">Пропущенные разделы не исчезают: пара вопросов из них будет приходить в повторениях. Закрыть раздел полностью можно, сдав его босса.</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">К карте трека</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isMap}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; padding: 12px 20px 8px; display: flex; flex-direction: column; gap: 10px; background: #F4F6F8; border-bottom: 1px solid #DDE3EA">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">Инвестиции</span>
+<div role="img" aria-label="Серия: 0 дней" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #4B5563"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>0</span></div>
+</div>
+<div role="tablist" aria-label="Уровни трека" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 4px; border-radius: 12px; background: #E5E9EF">
+<button type="button" role="tab" aria-selected="true" style="height: 40px; border: 0; border-radius: 9px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 16px; font-weight: 800">Основа</button>
+<button type="button" role="tab" aria-selected="false" disabled style="height: 40px; border: 0; border-radius: 9px; background: transparent; color: #4B5563; font-family: inherit; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Практика</button>
+<button type="button" role="tab" aria-selected="false" disabled style="height: 40px; border: 0; border-radius: 9px; background: transparent; color: #4B5563; font-family: inherit; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Мастер</button>
+</div>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 14px 20px 28px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">Цель: {{map.goal}}</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">{{map.mins}} в день</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">Неделя: 0 из 30 мин</span>
+</div>
+<sc-for list="{{map.sections}}" as="s" hint-placeholder-count="3">
+<div style="background: #FFFFFF; border: 2px solid {{s.border}}; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px">
+<div><div style="font-size: 14px; font-weight: 800; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Раздел {{s.num}}</div><div style="font-size: 20px; font-weight: 800; line-height: 1.25">{{s.title}}</div></div>
+<span style="flex: none; padding: 4px 10px; border-radius: 999px; background: {{s.tagBg}}; color: {{s.tagInk}}; font-size: 14px; font-weight: 800">{{s.tag}}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{s.lessons}}" as="l" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; border-radius: 12px; background: {{l.rowBg}}">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: {{l.circleBg}}; color: {{l.circleInk}}; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800">{{l.mark}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 700; line-height: 1.3; color: {{l.ink}}">{{l.title}}</span><sc-if value="{{l.hasNote}}" hint-placeholder-val="{{false}}"><span style="font-size: 14px; font-weight: 700; color: #4B5563">{{l.note}}</span></sc-if></span>
+<sc-if value="{{l.smallLink}}" hint-placeholder-val="{{false}}"><a href="{{l.href}}" style="flex: none; display: flex; align-items: center; height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 2px solid #157A41; color: #157A41; font-size: 16px; font-weight: 800; text-decoration: none">Открыть</a></sc-if>
+<sc-if value="{{l.smallPeek}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{l.peek}}" aria-expanded="{{l.peekOpen}}" style="flex: none; height: 44px; padding: 0 14px; border-radius: 10px; border: 2px solid #DDE3EA; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 16px; font-weight: 800; cursor: pointer">Открыть</button></sc-if>
+</div>
+<sc-if value="{{l.isLinked}}" hint-placeholder-val="{{false}}"><a href="{{l.href}}" style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 12px; background: #157A41; color: #FFFFFF; font-size: 18px; font-weight: 800; text-decoration: none">Начать урок · 5 мин</a></sc-if>
+<sc-if value="{{l.showMissing}}" hint-placeholder-val="{{false}}"><div role="status" style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4; color: #4B5563"><span>Этот урок ещё не собран — в прототипе пока готов только раздел 1.</span><a href="compound.html" style="font-weight: 800">Открыть урок «Сложный процент»</a></div></sc-if>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 12px; border: 2px dashed #B4410C">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 30px; height: 30px; border-radius: 8px; background: #FDEDE4; color: #B4410C; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.5-.8z"></path></svg></span>
+<div style="flex: 1; min-width: 0"><div style="font-size: 14px; font-weight: 800; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Босс раздела · {{s.bossSize}}</div><div style="font-size: 17px; font-weight: 700; line-height: 1.3">{{s.boss}}</div></div>
+</div>
+<sc-if value="{{s.bossOpenable}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{s.startBoss}}" style="height: 44px; border: 2px solid #B4410C; border-radius: 12px; background: #FFFFFF; color: #B4410C; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">{{s.bossLabel}}</button></sc-if>
+<sc-if value="{{s.bossPassed}}" hint-placeholder-val="{{false}}"><div role="status" style="padding: 10px 12px; border-radius: 10px; background: #E7F5EC; color: #157A41; font-size: 16px; font-weight: 800">Сдан экстерном: {{s.bossScore}}</div></sc-if>
+</div>
+</div>
+</sc-for>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563; text-align: center">{{map.footer}}</p>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isBossIntro}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center">
+<button type="button" onClick="{{toMap}}" aria-label="Вернуться к карте" style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div aria-hidden="true" style="width: 64px; height: 64px; border-radius: 18px; background: #FDEDE4; color: #B4410C; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.5-.8z"></path></svg></div>
+<div style="font-size: 15px; font-weight: 700; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Босс раздела {{boss.secNum}} · экстерн</div>
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800">{{boss.title}}</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.5">Это не тест, а работа: {{boss.count}} задачи на одной ситуации. Ответы проверяются в конце, за частично верный ответ — часть баллов. Чтобы закрыть раздел, нужно {{boss.passLabel}}.</p>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; color: #4B5563; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px">Ситуация</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.5">{{boss.brief}}</p>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<button type="button" onClick="{{boss.begin}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Начать</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isBossTask}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{boss.prev}}" aria-label="Назад" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div role="progressbar" aria-label="Задачи босса" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{boss.pctNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{boss.pct}}; background: #B4410C; border-radius: 6px; transition: width .35s ease"></div></div>
+<span style="flex: none; font-size: 16px; font-weight: 800; color: #4B5563">{{boss.counter}}</span>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; line-height: 1.45; color: #374151">{{boss.brief}}</div>
+<div style="font-size: 15px; font-weight: 700; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Задача {{boss.taskNum}} · {{boss.taskTitle}}</div>
+<h2 style="margin: 0; font-size: 22px; line-height: 1.3; font-weight: 800">{{boss.taskText}}</h2>
+<sc-if value="{{boss.isChoiceLike}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{boss.options}}" as="o" hint-placeholder-count="4">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 24px; height: 24px; box-sizing: border-box; border-radius: {{o.markRadius}}; border: 2px solid {{o.markBorder}}; background: {{o.markBg}}; display: flex; align-items: center; justify-content: center; color: #FFFFFF"><sc-if value="{{o.marked}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></sc-if></span><span style="font-size: 18px; font-weight: 600; line-height: 1.35">{{o.text}}</span></button>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{boss.isNumber}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="boss-num" style="font-size: 16px; font-weight: 700; color: #4B5563">Ответ в рублях</label>
+<div style="display: flex; align-items: center; gap: 10px">
+<input id="boss-num" type="number" inputMode="numeric" value="{{boss.numValue}}" onChange="{{boss.setNum}}" style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; padding: 0 14px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 24px; font-weight: 800; color: #14213D">
+<span style="flex: none; font-size: 24px; font-weight: 800">₽</span>
+</div>
+<span style="font-size: 15px; color: #4B5563">Можно считать на калькуляторе — это работа, а не экзамен по памяти.</span>
+</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{boss.ready}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">{{boss.nextLabel}}</button></sc-if>
+<sc-if value="{{boss.notReady}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Ответь на задачу</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isBossResult}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 48px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div aria-hidden="true" style="flex: none; width: 64px; height: 64px; border-radius: 50%; background: {{br.iconBg}}; color: {{br.iconInk}}; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.5-.8z"></path></svg></div>
+<div>
+<h1 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">{{br.title}}</h1>
+<p style="margin: 4px 0 0; font-size: 17px; color: #374151">{{br.sub}}</p>
+</div>
+</div>
+<sc-for list="{{br.rows}}" as="r" hint-placeholder-count="3">
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><span style="font-size: 17px; font-weight: 800">{{r.title}}</span><span style="flex: none; padding: 4px 10px; border-radius: 999px; background: {{r.bg}}; color: {{r.ink}}; font-size: 15px; font-weight: 800">{{r.pts}}</span></div>
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #374151">{{r.why}}</p>
+</div>
+</sc-for>
+<sc-if value="{{br.hasGaps}}" hint-placeholder-val="{{false}}">
+<div style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">Закрой пробелы — и возвращайся</div>
+<sc-for list="{{br.lessons}}" as="g" hint-placeholder-count="2"><div style="font-size: 16px; line-height: 1.4">• урок «{{g.title}}»</div></sc-for>
+</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">К карте трека</button>
+<sc-if value="{{br.failed}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.retry}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Попробовать ещё раз</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  initial() {
+    return { screen: 0, goal: null, mins: null, wish: false, q: 0, ans: [null, null, null, null, null], tested: false,
+      extern: [null, null, null], bossSec: 0, bt: 0, bAns: [], peek: '' };
+  }
+
+  st() {
+    return Object.assign(this.initial(), this.state || {});
+  }
+
+  renderVals() {
+    var self = this;
+    var st = this.st();
+    var GREEN = '#157A41', GREEN_BG = '#E7F5EC', ORANGE = '#B4410C', ORANGE_BG = '#FDEDE4';
+    var LINE = '#DDE3EA', INK = '#14213D', MUTED = '#4B5563', BLUE = '#1D4ED8', BLUE_BG = '#E8EEFD';
+
+    /* Цели */
+    var GOALS = [
+      { id: 'zero', title: 'Начать инвестировать с нуля', sub: 'Ещё ничего не покупал(а) на бирже', short: 'начать с нуля' },
+      { id: 'some', title: 'Уже инвестирую, хочу разобраться', sub: 'Счёт есть, но действую наугад', short: 'разобраться' },
+      { id: 'exam', title: 'Сдать тест ЦБ для неквалов', sub: 'Нужен доступ к сложным инструментам', short: 'тест ЦБ' },
+      { id: 'pro', title: 'Знаю базу, хочу глубже', sub: 'Пропущу то, что уже знаю', short: 'глубже' }
+    ];
+    var goals = GOALS.map(function (g) {
+      var mine = st.goal === g.id;
+      return { title: g.title, sub: g.sub, pressed: mine, border: mine ? BLUE : LINE, bg: mine ? BLUE_BG : '#FFFFFF',
+        pick: function () { self.setState({ goal: g.id }); } };
+    });
+    var goalObj = null;
+    GOALS.forEach(function (g) { if (g.id === st.goal) goalObj = g; });
+
+    /* Время в день */
+    var MINS = [
+      { v: 5, title: '5 минут', sub: 'урок в день' },
+      { v: 10, title: '10 минут', sub: 'урок и повторение' },
+      { v: 15, title: '15 минут', sub: 'урок, повторение и практика' }
+    ];
+    var minsOptions = MINS.map(function (o) {
+      var mine = st.mins === o.v;
+      return { title: o.title, sub: o.sub, pressed: mine, border: mine ? BLUE : LINE, bg: mine ? BLUE_BG : '#FFFFFF',
+        pick: function () { self.setState({ mins: o.v }); } };
+    });
+
+    /* Входной тест */
+    var SECTIONS = ['Как растут деньги', 'Что покупают на бирже', 'Ловушки и защита'];
+    var Q = [
+      { sec: 0, text: '100 000 ₽ положили под 10% годовых, проценты добавляются к сумме раз в год. Сколько будет через 2 года?',
+        opts: ['120 000 ₽', '121 000 ₽', '110 000 ₽'], ok: 1 },
+      { sec: 0, text: 'Вклад принёс 12% за год, а цены выросли на 9%. Насколько больше ты сможешь купить на эти деньги?',
+        opts: ['На 12%', 'Примерно на 3%', 'На 21%'], ok: 1 },
+      { sec: 1, text: 'Ключевая ставка выросла. Что обычно происходит с ценой уже выпущенных облигаций с постоянным купоном?',
+        opts: ['Растёт', 'Не меняется', 'Падает'], ok: 2 },
+      { sec: 1, text: 'Что получает покупатель акции?',
+        opts: ['Гарантированный доход', 'Долю в компании', 'Долг компании перед ним'], ok: 1 },
+      { sec: 2, text: 'Что из этого застраховано государством?',
+        opts: ['Акции на обычном брокерском счёте', 'Деньги, переведённые «брокеру» из Telegram', 'Вклад в банке — до 1,4 млн ₽ на один банк'], ok: 2 }
+    ];
+    var cur = Q[st.q] || Q[0];
+    var curAns = st.ans[st.q];
+    var testOptions = cur.opts.concat(['Не знаю']).map(function (t, i) {
+      var mine = curAns === i;
+      return { text: t, pressed: mine, border: mine ? BLUE : LINE, bg: mine ? BLUE_BG : '#FFFFFF', ink: i === 3 ? MUTED : INK,
+        pick: function () { var a = self.st().ans.slice(); a[self.st().q] = i; self.setState({ ans: a }); } };
+    });
+    var test = {
+      num: st.q + 1, section: SECTIONS[cur.sec], text: cur.text, options: testOptions,
+      answered: curAns !== null, open: curAns === null,
+      nextLabel: st.q === 4 ? 'Узнать результат' : 'Дальше',
+      next: function () {
+        var s = self.st();
+        if (s.q < 4) self.setState({ q: s.q + 1 });
+        else self.setState({ screen: 5, tested: true });
+      }
+    };
+
+    var right = Q.map(function (q, i) { return st.tested && st.ans[i] === q.ok; });
+    var known = [right[0] && right[1], right[2] && right[3], right[4]];
+    var firstUnknown = known.indexOf(false);
+    var knownCount = known.filter(function (k) { return k; }).length;
+
+    var result = {
+      title: knownCount === 0 ? 'Начнём с самого начала' : (firstUnknown === -1 ? 'Основу ты знаешь' : 'Начнёшь с раздела ' + (firstUnknown + 1)),
+      text: knownCount === 0
+        ? 'Это нормально: первые уроки как раз про то, что спросили в тесте. Займёт пару недель по 5 минут.'
+        : (firstUnknown === -1
+          ? 'Все три раздела можно пропустить. Сдай боссов — и откроется уровень «Практика».'
+          : 'Знакомое пропускаем, чтобы не тратить время на то, что ты уже понимаешь.'),
+      rows: SECTIONS.map(function (title, i) {
+        return { title: title, verdict: known[i] ? 'знаешь' : 'стоит пройти', bg: known[i] ? GREEN_BG : ORANGE_BG, ink: known[i] ? GREEN : ORANGE,
+          line: i === 2 ? 'transparent' : LINE };
+      })
+    };
+
+    /* Карта трека */
+    var TRACK = [
+      { title: 'Как растут деньги', lessons: ['Сложный процент', 'Инфляция и реальная доходность', 'Риск и доходность', '«Гарантированный доход»: признаки пирамиды'],
+        boss: 'Три предложения: какое честное и какое выгоднее' },
+      { title: 'Что покупают на бирже', lessons: ['Акции: доля в бизнесе', 'Облигации: долг с купоном', 'Фонды: корзина за одну покупку', 'Брокер, комиссии и налог'],
+        boss: 'Собери корзину под цель через 3 года' },
+      { title: 'Ловушки и защита', lessons: ['Лжеброкеры и инвестчаты', 'Что застраховано, а что нет', 'Паника и жадность: продать на дне', 'Тест ЦБ для неквалов: что это'],
+        boss: 'Найди все ловушки в рекламе курса' }
+    ];
+    /* Боссы разделов: работа на одной ситуации, проверка в конце, частичные баллы */
+    var BOSSES = [
+      { title: 'Три предложения: какое честное и какое выгоднее', pass: 5,
+        brief: 'Марина выбирает, куда положить 300 000 ₽ на 3 года. А — вклад 12% годовых, проценты раз в год добавляются к сумме. Б — вклад 13% годовых, проценты раз в год приходят на карту, и Марина их тратит. В — «Инвестклуб» с доходом 5% в месяц.',
+        tasks: [
+          { type: 'multi', title: 'Признаки пирамиды', text: 'Отметь в рекламе «Инвестклуба» все признаки финансовой пирамиды.',
+            opts: ['«Гарантируем 5% в месяц»', '«Приведи друга — получи 10% от его вклада»', '«Работаем по договору займа, лицензия не нужна»', '«Деньги можно забрать в любой момент»', '«Офис в центре города, 7 лет на рынке»', '«Проверьте нас в справочнике участников рынка ЦБ»'],
+            ok: [0, 1, 2], lesson: '«Гарантированный доход»: признаки пирамиды',
+            why: 'Признаки — гарантия высокого дохода, бонусы за приглашённых и работа без лицензии ЦБ. Офис и «7 лет на рынке» ничего не доказывают, а справочник ЦБ — как раз способ проверки.' },
+          { type: 'number', title: 'Итог вклада А', text: 'Сколько будет на вкладе А через 3 года? Можно округлить до тысячи.',
+            lo: 415000, hi: 428000, lesson: 'Сложный процент',
+            why: '300 000 → 336 000 → 376 320 → 421 478 ₽: каждый год 12% начисляются на уже выросшую сумму.' },
+          { type: 'choice', title: 'А или Б', text: 'Что выгоднее за 3 года — вклад А (12%, проценты к сумме) или Б (13%, проценты на карту и тратятся)?',
+            opts: ['Б — у него ставка выше', 'А — проценты приносят проценты', 'Одинаково'], ok: 1, lesson: 'Сложный процент',
+            why: 'А даёт 121 478 ₽ дохода, Б — 117 000 ₽ (3 × 39 000). Капитализация перевесила лишний процент ставки.' },
+          { type: 'choice', title: 'Реальная доходность', text: 'Цены растут на 8% в год. Насколько больше Марина сможет купить через год на деньги со вклада А?',
+            opts: ['На 12%', 'Примерно на 4%', 'На 20%'], ok: 1, lesson: 'Инфляция и реальная доходность',
+            why: '1,12 / 1,08 ≈ 1,037: покупательная способность растёт примерно на 4%, а не на 12%.' }
+        ] },
+      { title: 'Собери корзину под цель через 3 года', pass: 4,
+        brief: 'Тимур копит 200 000 ₽ на первый взнос за квартиру. Деньги понадобятся ровно через 3 года, и терять больше 10% нельзя.',
+        tasks: [
+          { type: 'multi', title: 'Корзина', text: 'Отметь всё, что подходит в корзину Тимура.',
+            opts: ['ОФЗ с погашением через 3 года', 'Фонд денежного рынка', 'Облигации крупной надёжной компании со сроком 3 года', 'Акции одной компании, выросшие на 40% за месяц', 'Фонд на индекс акций Мосбиржи', 'Облигации неизвестной компании с доходностью на 10% выше рынка'],
+            ok: [0, 1, 2], lesson: 'Облигации: долг с купоном',
+            why: 'Под короткую цель без права на большой убыток подходят облигации с погашением к сроку и фонд денежного рынка. Акции и индекс за 3 года могут упасть на треть, а сверхдоходность облигаций — плата за риск невозврата.' },
+          { type: 'choice', title: 'Ставка выросла', text: 'Через год ЦБ поднял ключевую ставку, и цена ОФЗ в корзине упала. Тимур держит их до погашения. Что делать?',
+            opts: ['Срочно продать, пока не упало ещё', 'Ничего: при погашении он получит номинал', 'Докупить на все деньги в кредит'], ok: 1, lesson: 'Облигации: долг с купоном',
+            why: 'До погашения цена облигации колеблется вместе со ставкой. Если держать до конца, государство вернёт номинал и выплатит купоны.' },
+          { type: 'number', title: 'Комиссия брокера', text: 'Брокер берёт 0,3% от суммы сделки. Сколько рублей Тимур заплатит за покупку на 200 000 ₽?',
+            lo: 600, hi: 600, lesson: 'Брокер, комиссии и налог',
+            why: '200 000 × 0,003 = 600 ₽. Комиссия берётся с каждой сделки, поэтому частые сделки съедают доход.' }
+        ] },
+      { title: 'Найди все ловушки в рекламе курса', pass: 6,
+        brief: 'Игорю прислали рекламу курса «Трейдинг для всех» и просят оплатить сегодня.',
+        tasks: [
+          { type: 'multi', title: 'Ловушки в рекламе', text: 'Отметь все фразы, которые должны насторожить.',
+            opts: ['«Наши ученики зарабатывают от 30% в месяц»', '«Осталось 3 места, оплатите до полуночи»', '«Сигналы в закрытом чате — просто повторяй сделки»', '«Покажем, как проверить брокера в справочнике ЦБ»', '«Убытков не бывает — стратегия проверена»', '«Оплата на карту куратора, так быстрее»', '«Разберём, как платить налог с дохода»'],
+            ok: [0, 1, 2, 4, 5], lesson: 'Лжеброкеры и инвестчаты',
+            why: 'Ловушки — обещание высокой доходности, спешка, «сигналы» в чате, «убытков не бывает» и оплата на личную карту. Проверка брокера по справочнику ЦБ и разговор о налогах — признаки честного курса.' },
+          { type: 'choice', title: 'Банкротство брокера', text: 'Брокер, у которого Игорь купил акции, обанкротился. Что будет с акциями?',
+            opts: ['Пропадут вместе с брокером', 'Останутся у Игоря: их учитывают отдельно от имущества брокера', 'Государство выплатит их стоимость, как по вкладу'], ok: 1, lesson: 'Что застраховано, а что нет',
+            why: 'Бумаги клиента, как правило, учитываются в депозитарии отдельно и переводятся к другому брокеру. Но от падения цены это не страхует: государство страхует только вклады в банках.' },
+          { type: 'choice', title: 'Паника', text: 'Индекс упал на 25% за месяц. План Игоря — копить 10 лет. Что разумнее?',
+            opts: ['Продать всё, пока не стало хуже', 'Держаться плана и не продавать на эмоциях', 'Взять кредит и докупить на все'], ok: 1, lesson: 'Паника и жадность: продать на дне',
+            why: 'Продажа на панике фиксирует убыток. Если цель далеко и план рассчитан на просадки, разумнее его держаться.' }
+        ] }
+    ];
+    function taskMax(t) { return t.type === 'multi' ? t.ok.length : 1; }
+    function bossMax(b) { return b.tasks.reduce(function (s, t) { return s + taskMax(t); }, 0); }
+    function parseNum(v) { return Number(String(v === null || v === undefined ? '' : v).replace(/\s/g, '').replace(',', '.')); }
+    function taskScore(t, a) {
+      if (a === null || a === undefined) return 0;
+      if (t.type === 'choice') return a === t.ok ? 1 : 0;
+      if (t.type === 'number') { var n = parseNum(a); return isFinite(n) && n >= t.lo && n <= t.hi ? 1 : 0; }
+      var c = a.filter(function (i) { return t.ok.indexOf(i) >= 0; }).length;
+      return Math.max(0, c - (a.length - c));
+    }
+    function startBoss(si) {
+      self.setState({ screen: 7, bossSec: si, bt: 0, bAns: BOSSES[si].tasks.map(function () { return null; }) });
+    }
+
+    var B = BOSSES[st.bossSec] || BOSSES[0];
+    var bTask = B.tasks[st.bt] || B.tasks[0];
+    var bA = st.bAns[st.bt];
+    var bOptions = (bTask.opts || []).map(function (t, i) {
+      var multi = bTask.type === 'multi';
+      var sel = multi ? (bA || []).indexOf(i) >= 0 : bA === i;
+      return {
+        text: t, pressed: sel, border: sel ? BLUE : LINE, bg: sel ? BLUE_BG : '#FFFFFF',
+        markRadius: multi ? '7px' : '50%', markBorder: sel ? BLUE : '#6B7280', markBg: sel ? BLUE : '#FFFFFF', marked: sel,
+        pick: function () {
+          var s = self.st(); var all = s.bAns.slice(); var cur = all[s.bt];
+          if (multi) { cur = (cur || []).slice(); var k = cur.indexOf(i); if (k >= 0) cur.splice(k, 1); else cur.push(i); all[s.bt] = cur; }
+          else all[s.bt] = i;
+          self.setState({ bAns: all });
+        }
+      };
+    });
+    var bReady = bTask.type === 'multi' ? !!(bA && bA.length) : (bTask.type === 'number' ? (bA !== null && bA !== undefined && String(bA).trim() !== '') : bA !== null && bA !== undefined);
+    var boss = {
+      secNum: st.bossSec + 1, title: B.title, brief: B.brief, count: B.tasks.length,
+      passLabel: B.pass + ' из ' + bossMax(B) + ' баллов',
+      pct: Math.round((st.bt + 1) / B.tasks.length * 100) + '%', pctNum: Math.round((st.bt + 1) / B.tasks.length * 100),
+      counter: (st.bt + 1) + ' / ' + B.tasks.length,
+      taskNum: st.bt + 1, taskTitle: bTask.title, taskText: bTask.text,
+      isChoiceLike: bTask.type !== 'number', isNumber: bTask.type === 'number', isMulti: bTask.type === 'multi',
+      options: bOptions, numValue: bA === null || bA === undefined ? '' : bA,
+      setNum: function (e) { var s = self.st(); var all = s.bAns.slice(); all[s.bt] = e.target.value; self.setState({ bAns: all }); },
+      ready: bReady, notReady: !bReady,
+      nextLabel: st.bt === B.tasks.length - 1 ? 'Сдать босса' : 'Дальше',
+      next: function () {
+        var s = self.st(); var b = BOSSES[s.bossSec];
+        if (s.bt < b.tasks.length - 1) { self.setState({ bt: s.bt + 1 }); return; }
+        var total = b.tasks.reduce(function (sum, t, i) { return sum + taskScore(t, s.bAns[i]); }, 0);
+        var ex = s.extern.slice();
+        if (total >= b.pass) ex[s.bossSec] = total;
+        self.setState({ screen: 9, extern: ex });
+      },
+      prev: function () { var s = self.st(); if (s.bt > 0) self.setState({ bt: s.bt - 1 }); else self.setState({ screen: 7 }); },
+      begin: function () { self.setState({ screen: 8, bt: 0 }); },
+      retry: function () { startBoss(self.st().bossSec); }
+    };
+    var bTotal = B.tasks.reduce(function (sum, t, i) { return sum + taskScore(t, st.bAns[i]); }, 0);
+    var bPassed = bTotal >= B.pass;
+    var gapLessons = [];
+    var br = {
+      title: bPassed ? 'Раздел закрыт экстерном' : 'Пока не хватило баллов',
+      sub: 'Баллы: ' + bTotal + ' из ' + bossMax(B) + ', нужно ' + B.pass,
+      iconBg: bPassed ? GREEN_BG : ORANGE_BG, iconInk: bPassed ? GREEN : ORANGE,
+      passed: bPassed, failed: !bPassed,
+      rows: B.tasks.map(function (t, i) {
+        var sc = taskScore(t, st.bAns[i]), mx = taskMax(t), full = sc === mx;
+        if (!full && gapLessons.indexOf(t.lesson) < 0) gapLessons.push(t.lesson);
+        return { title: t.title, pts: sc + ' из ' + mx, why: t.why, bg: full ? GREEN_BG : ORANGE_BG, ink: full ? GREEN : ORANGE };
+      })
+    };
+    br.lessons = gapLessons.map(function (l) { return { title: l }; });
+    br.hasGaps = !bPassed && gapLessons.length > 0;
+
+    /* Карта трека */
+    var done = [0, 1, 2].map(function (i) { return known[i] || st.extern[i] !== null; });
+    var curSec = done.indexOf(false);
+    var sections = TRACK.map(function (sec, si) {
+      var isKnown = known[si], isExtern = st.extern[si] !== null, isDone = isKnown || isExtern;
+      var isCur = si === curSec;
+      var tag = isExtern ? 'сдан экстерном' : (isKnown ? 'пропущен по тесту' : (isCur ? 'сейчас здесь' : 'впереди'));
+      return {
+        num: si + 1, title: sec.title, boss: sec.boss, bossSize: BOSSES[si].tasks.length + ' задачи на одной ситуации',
+        border: isCur ? GREEN : LINE,
+        tag: tag, tagBg: isDone ? GREEN_BG : (isCur ? GREEN : '#F4F6F8'), tagInk: isDone ? GREEN : (isCur ? '#FFFFFF' : MUTED),
+        bossOpenable: !isExtern, bossPassed: isExtern,
+        bossLabel: isKnown ? 'Закрыть раздел полностью' : 'Сдать раздел экстерном',
+        bossScore: isExtern ? st.extern[si] + ' из ' + bossMax(BOSSES[si]) + ' баллов' : '',
+        startBoss: function () { startBoss(si); },
+        lessons: sec.lessons.map(function (t, li) {
+          var key = si + '-' + li;
+          var current = isCur && li === 0;
+          var built = si === 0;
+          var href = ['compound.html', 'inflation.html', 'risk.html', 'pyramid.html'][li];
+          var mark = String(li + 1), circleBg = '#F4F6F8', circleInk = MUTED, ink = INK, note = '', rowBg = 'transparent';
+          if (isDone) { mark = '✓'; circleBg = GREEN_BG; circleInk = GREEN; note = isExtern ? 'закрыт экстерном' : 'в повторениях'; ink = MUTED; }
+          else if (current) { circleBg = GREEN; circleInk = '#FFFFFF'; rowBg = GREEN_BG; }
+          return {
+            title: t, href: href, mark: mark, circleBg: circleBg, circleInk: circleInk, ink: ink, note: note, hasNote: note !== '', rowBg: rowBg,
+            isLinked: current && built, smallLink: built && !current, smallPeek: !built && !current,
+            peekOpen: st.peek === key,
+            showMissing: (current && !built) || st.peek === key,
+            peek: function () { self.setState({ peek: self.st().peek === key ? '' : key }); }
+          };
+        })
+      };
+    });
+    var allDone = curSec === -1;
+    var map = {
+      goal: goalObj ? goalObj.short : 'начать с нуля',
+      mins: (st.mins || 5) + ' мин',
+      sections: sections,
+      footer: allDone ? 'Основа закрыта. В приложении здесь откроется уровень «Практика».' : 'Практика откроется, когда закроешь все три раздела Основы.'
+    };
+
+    var setupScreens = { 1: 20, 2: 40, 3: 60, 4: 60 + st.q * 8, 5: 100 };
+    var sp = setupScreens[st.screen] || 0;
+
+    return {
+      isWelcome: st.screen === 0, isGoal: st.screen === 1, isMins: st.screen === 2, isOffer: st.screen === 3,
+      isTest: st.screen === 4, isResult: st.screen === 5, isMap: st.screen === 6,
+      isBossIntro: st.screen === 7, isBossTask: st.screen === 8, isBossResult: st.screen === 9,
+      boss: boss, br: br,
+      inSetup: st.screen >= 1 && st.screen <= 5,
+      setupPct: sp + '%', setupNum: sp,
+      goals: goals, goalChosen: st.goal !== null, goalOpen: st.goal === null,
+      hasWish: st.wish, noWish: !st.wish, makeWish: function () { self.setState({ wish: true }); },
+      minsOptions: minsOptions, minsChosen: st.mins !== null, minsOpen: st.mins === null,
+      test: test, result: result, map: map,
+      go1: function () { self.setState({ screen: 1 }); },
+      go2: function () { self.setState({ screen: 2 }); },
+      afterMins: function () { self.setState({ screen: self.st().goal === 'zero' ? 6 : 3 }); },
+      startTest: function () { self.setState({ screen: 4, q: 0, ans: [null, null, null, null, null], tested: false }); },
+      skipTest: function () { self.setState({ screen: 6, tested: false }); },
+      toMap: function () { self.setState({ screen: 6 }); },
+      back: function () {
+        var s = self.st();
+        if (s.screen === 4 && s.q > 0) self.setState({ q: s.q - 1 });
+        else if (s.screen === 4) self.setState({ screen: 3 });
+        else if (s.screen === 5) self.setState({ screen: 4, q: 4 });
+        else self.setState({ screen: s.screen - 1 });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

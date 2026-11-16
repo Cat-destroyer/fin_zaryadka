@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23157A41'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<title>Финзарядка — урок «Сложный процент»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F4F6F8; font-family: 'Manrope', system-ui, sans-serif; color: #14213D">
+
+<sc-if value="{{inLesson}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{close}}" aria-label="Закрыть урок" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div role="progressbar" aria-label="Прогресс урока" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progressNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{progress}}; background: #157A41; border-radius: 6px; transition: width .35s ease"></div></div>
+<div role="img" aria-label="Серия: {{streak}} дня" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStart}}" hint-placeholder-val="{{true}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">Финзарядка</span>
+<div role="img" aria-label="Серия: {{streak}} дня" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 8px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Инвестиции · Основа · Урок 1</div>
+<div aria-hidden="true" style="width: 72px; height: 72px; border-radius: 20px; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M6 16v-2M10 16v-4M14 16V9M18 16V5"></path></svg></div>
+<h1 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 800">Сложный процент: почему время важнее суммы</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Тимур решает: начать откладывать сейчас понемногу или через 10 лет, но вдвое больше. Сначала угадай, потом проверим на ползунках.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; font-weight: 700">5 минут</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; font-weight: 700">4 шага</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; font-weight: 700">Навык: сложный процент</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px">
+<div style="font-size: 17px; font-weight: 800; margin-bottom: 8px">Как устроен урок</div>
+<ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 17px; line-height: 1.45">
+<li><b>Попробуй</b> — угадай ответ, ошибаться можно</li>
+<li><b>Разбери</b> — подвигай ползунки и найди закономерность</li>
+<li><b>Вспомни</b> — пара коротких заданий</li>
+<li><b>Примени к себе</b> — посчитай на своих цифрах</li>
+</ol>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<button type="button" onClick="{{start}}" style="height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Начать урок</button>
+<div style="text-align: center; font-size: 15px; color: #4B5563">Первый урок трека «Инвестиции»</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isPredict}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 1 из 4 · Попробуй</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; gap: 12px; align-items: flex-start">
+<div aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: #14213D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800">Т</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.5">Тимуру 24. Он выбирает между двумя планами — копить до 55 лет. В обоих деньги растут на 10% в год.</p>
+</div>
+<h2 style="margin: 4px 0 0; font-size: 23px; line-height: 1.25; font-weight: 800">В каком плане к 55 годам денег будет больше?</h2>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{predOptions}}" as="o" hint-placeholder-count="3">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 56px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 800; line-height: 1.35">{{o.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563">{{o.sub}}</span></button>
+</sc-for>
+</div>
+<sc-if value="{{predDone}}" hint-placeholder-val="{{false}}">
+<div role="status" style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; font-size: 17px; line-height: 1.45"><b>Ответ записан.</b> Правильный покажем после разбора — сначала посмотрим, как растут деньги.</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{predDone}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
+<sc-if value="{{predOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSandbox}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Разбери</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.25; font-weight: 800">Проценты на проценты</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.5">Каждый год доход начисляется не только на твои взносы, но и на уже заработанные проценты. Это и есть <button type="button" onClick="{{toggleTerm}}" aria-expanded="{{termOpen}}" style="padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 17px; font-weight: 800; color: #1D4ED8; text-decoration: underline dotted; text-underline-offset: 3px; cursor: pointer">сложный процент</button>.</p>
+<sc-if value="{{termOpen}}" hint-placeholder-val="{{false}}">
+<div style="padding: 12px 14px; border-radius: 12px; background: #E8EEFD; font-size: 16px; line-height: 1.45"><b>Сложный процент</b> — доход на вложенные деньги плюс доход на прошлый доход. У вклада это называется <b>капитализацией</b>: банк добавляет проценты к сумме, и дальше они тоже приносят проценты.</div>
+</sc-if>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div><div style="font-size: 14px; font-weight: 700; color: #4B5563">Вложено</div><div style="font-size: 17px; font-weight: 800; color: #1E3A8A">{{sb.contrib}}</div></div>
+<div><div style="font-size: 14px; font-weight: 700; color: #4B5563">Проценты</div><div style="font-size: 17px; font-weight: 800; color: #157A41">{{sb.interest}}</div></div>
+<div><div style="font-size: 14px; font-weight: 700; color: #4B5563">Итого</div><div style="font-size: 17px; font-weight: 800">{{sb.total}}</div></div>
+</div>
+<div role="img" aria-label="{{sb.aria}}" style="height: 132px; display: flex; align-items: flex-end; gap: 2px; border-bottom: 1px solid #DDE3EA">
+<sc-for list="{{sb.bars}}" as="b" hint-placeholder-count="10">
+<div style="flex: 1 1 0; min-width: 0; height: 132px; display: flex; flex-direction: column; justify-content: flex-end"><div style="height: {{b.intH}}; background: #22A35A; border-radius: 2px 2px 0 0"></div><div style="height: {{b.conH}}; background: #1E3A8A"></div></div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: #4B5563"><span>1-й год</span><span>{{sb.yearsLabel}}</span></div>
+<div style="display: flex; gap: 16px; font-size: 15px; font-weight: 700">
+<span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #1E3A8A"></span>вложено мной</span>
+<span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 3px; background: #22A35A"></span>заработали проценты</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700"><label for="sb-y">Срок</label><span>{{sb.yearsLabel}}</span></div>
+<input id="sb-y" type="range" min="1" max="40" step="1" value="{{sb.y}}" onChange="{{sb.setY}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700"><label for="sb-m">Взнос в месяц</label><span>{{sb.mLabel}}</span></div>
+<input id="sb-m" type="range" min="1000" max="30000" step="1000" value="{{sb.m}}" onChange="{{sb.setM}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700"><label for="sb-r">Доходность в год</label><span>{{sb.rLabel}}</span></div>
+<input id="sb-r" type="range" min="0" max="15" step="1" value="{{sb.r}}" onChange="{{sb.setR}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+</div>
+</div>
+<sc-if value="{{sbTaskOpen}}" hint-placeholder-val="{{true}}">
+<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 2px dashed #1D4ED8; font-size: 17px; line-height: 1.45"><b>Задание.</b> Двигай срок и найди год, когда зелёная часть столбика станет больше синей — проценты принесут больше, чем ты вложил.</div>
+</sc-if>
+<sc-if value="{{sbFound}}" hint-placeholder-val="{{false}}">
+<div role="status" style="padding: 14px 16px; border-radius: 14px; background: #E7F5EC; font-size: 17px; line-height: 1.45"><div style="font-size: 19px; font-weight: 800; color: #157A41">Нашёл!</div>{{sb.foundText}}</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{sbFound}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Проверить мой ответ про Тимура</button></sc-if>
+<sc-if value="{{sbTaskOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Сначала выполни задание</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isReveal}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Разбери</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.25; font-weight: 800">Вернёмся к Тимуру</h2>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 17px; font-weight: 800"><span>А · с 25 лет по 5 000 ₽</span><span style="color: #157A41">11,3 млн ₽</span></div>
+<div role="img" aria-label="План А: вложено 1,8 млн рублей, проценты 9,5 млн рублей" style="height: 22px; display: flex; border-radius: 6px; overflow: hidden; background: #F4F6F8"><div style="width: 15.9%; background: #1E3A8A"></div><div style="width: 84.1%; background: #22A35A"></div></div>
+<div style="font-size: 15px; font-weight: 600; color: #4B5563">вложено 1,8 млн ₽ · проценты 9,5 млн ₽</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 17px; font-weight: 800"><span>Б · с 35 лет по 10 000 ₽</span><span>7,6 млн ₽</span></div>
+<div role="img" aria-label="План Б: вложено 2,4 млн рублей, проценты 5,2 млн рублей" style="height: 22px; display: flex; border-radius: 6px; overflow: hidden; background: #F4F6F8"><div style="width: 21.2%; background: #1E3A8A"></div><div style="width: 46%; background: #22A35A"></div></div>
+<div style="font-size: 15px; font-weight: 600; color: #4B5563">вложено 2,4 млн ₽ · проценты 5,2 млн ₽</div>
+</div>
+</div>
+<div role="status" style="padding: 16px; border-radius: 14px; background: {{reveal.bg}}">
+<div style="font-size: 19px; font-weight: 800; color: {{reveal.ink}}">{{reveal.title}}</div>
+<p style="margin: 6px 0 0; font-size: 17px; line-height: 1.45">{{reveal.text}}</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px; font-size: 17px; line-height: 1.5"><b>Почему так.</b> Рубль, отложенный в 25 лет, к 55 вырастает почти в 20 раз, а отложенный в 35 — примерно в 7. Десять лет роста не купить даже двойным взносом.</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">10% в год — условная доходность для примера, а не прогноз. Реальная бывает выше, ниже и даже отрицательной.</p>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isEstimate}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 3 из 4 · Вспомни</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.25; font-weight: 800">Прикинь на глаз</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5">Игорь положил 100 000 ₽ на 20 лет. Каждый год сумма растёт на 10%. Сколько примерно будет в конце?</p>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<label for="est" style="font-size: 16px; font-weight: 700; color: #4B5563">Мой ответ</label>
+<div style="font-size: 32px; font-weight: 800; letter-spacing: -0.01em">{{est.label}}</div>
+<input id="est" type="range" min="100000" max="1500000" step="10000" value="{{est.value}}" onChange="{{est.set}}" disabled="{{est.locked}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+<div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: #4B5563"><span>100 тыс. ₽</span><span>1,5 млн ₽</span></div>
+</div>
+<sc-if value="{{est.fbShown}}" hint-placeholder-val="{{false}}">
+<div role="status" style="padding: 16px; border-radius: 14px; background: {{est.fbBg}}">
+<div style="font-size: 19px; font-weight: 800; color: {{est.fbInk}}">{{est.fbTitle}}</div>
+<p style="margin: 6px 0 0; font-size: 17px; line-height: 1.45">{{est.fbText}}</p>
+</div>
+</sc-if>
+<sc-if value="{{est.hint}}" hint-placeholder-val="{{false}}">
+<div style="padding: 16px; border-radius: 14px; background: #E8EEFD; display: flex; gap: 12px; align-items: flex-start">
+<div aria-hidden="true" style="flex: none; width: 36px; height: 36px; border-radius: 50%; background: #1D4ED8; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg></div>
+<div><div style="font-size: 17px; font-weight: 800; color: #1E3A8A">Объясни проще</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">При 10% в год сумма удваивается примерно за 7 лет. За 20 лет набирается почти три удвоения: 100 → 200 → 400 → около 700 тыс. ₽.</p></div>
+</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<sc-if value="{{est.canCheck}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{est.check}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Проверить</button></sc-if>
+<sc-if value="{{est.canReveal}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{est.reveal}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Показать ответ</button></sc-if>
+<sc-if value="{{est.done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isTm}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 3 из 4 · Вспомни</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.25; font-weight: 800">Правда или миф?</h2>
+<sc-for list="{{tmItems}}" as="t" hint-placeholder-count="3">
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 18px; font-weight: 700; line-height: 1.4">{{t.text}}</p>
+<sc-if value="{{t.open}}" hint-placeholder-val="{{true}}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" onClick="{{t.pickTrue}}" style="height: 48px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Правда</button>
+<button type="button" onClick="{{t.pickMyth}}" style="height: 48px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Миф</button>
+</div>
+</sc-if>
+<sc-if value="{{t.done}}" hint-placeholder-val="{{false}}">
+<div role="status" style="padding: 12px 14px; border-radius: 12px; background: {{t.bg}}">
+<div style="font-size: 18px; font-weight: 800; color: {{t.ink}}">{{t.head}}</div>
+<p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{t.why}}</p>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{tmAll}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
+<sc-if value="{{tmLeft}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Ответь на все три</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isApply}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Шаг 4 из 4 · Примени к себе</div>
+<h2 style="margin: 0; font-size: 23px; line-height: 1.25; font-weight: 800">А что с твоими деньгами?</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #4B5563">Цифры остаются только на этом телефоне.</p>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700"><label for="ap-m">Могу откладывать в месяц</label><span>{{ap.mLabel}}</span></div>
+<input id="ap-m" type="range" min="1000" max="50000" step="1000" value="{{ap.m}}" onChange="{{ap.setM}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700"><label for="ap-y">Деньги понадобятся через</label><span>{{ap.yLabel}}</span></div>
+<input id="ap-y" type="range" min="1" max="30" step="1" value="{{ap.y}}" onChange="{{ap.setY}}" style="width: 100%; height: 32px; margin: 0; accent-color: #157A41">
+</div>
+<div style="font-size: 17px; line-height: 1.45">За это время ты вложишь <b>{{ap.contrib}}</b>. Что может получиться:</div>
+<sc-for list="{{ap.rows}}" as="row" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 16px; font-weight: 700"><span>{{row.label}}</span><span>{{row.value}}</span></div>
+<div aria-hidden="true" style="height: 10px; border-radius: 5px; background: #F4F6F8; overflow: hidden"><div style="height: 100%; width: {{row.width}}; background: {{row.color}}; border-radius: 5px"></div></div>
+</div>
+</sc-for>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">Это не прогноз: доходность не гарантирована. Как её съедает инфляция — в следующем уроке.</p>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 17px; font-weight: 800">Задание из жизни</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.45">Открой приложение банка и проверь, есть ли у твоего вклада или накопительного счёта капитализация — добавляются ли проценты к сумме.</p>
+<sc-if value="{{noTask}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{takeTask}}" style="height: 48px; border: 2px solid #157A41; border-radius: 12px; background: #FFFFFF; color: #157A41; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Беру задание</button></sc-if>
+<sc-if value="{{hasTask}}" hint-placeholder-val="{{false}}"><div role="status" style="padding: 10px 12px; border-radius: 10px; background: #E7F5EC; color: #157A41; font-size: 16px; font-weight: 700">Добавили в задания недели. Напомним один раз, вечером.</div></sc-if>
+</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Завершить урок</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">Финзарядка</span>
+<div role="img" aria-label="Серия: {{streak}} дня" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div aria-hidden="true" style="flex: none; width: 64px; height: 64px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></div>
+<div>
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800">Урок пройден!</h1>
+<p style="margin: 4px 0 0; font-size: 17px; line-height: 1.4; color: #374151">Тимур решил начать сейчас — с 5 000 ₽ в месяц.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 14px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 800; color: #B4410C">{{streak}} дня</div><div style="font-size: 15px; color: #4B5563; font-weight: 600">серия</div></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 14px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 800">{{score}} из {{total}}</div><div style="font-size: 15px; color: #4B5563; font-weight: 600">верно с первой попытки</div></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px"><span style="font-size: 17px; font-weight: 800">Навык «Сложный процент»</span><span style="font-size: 15px; font-weight: 700; color: #157A41">знаком</span></div>
+<div role="img" aria-label="Ступень навыка: знаком, первая из трёх" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="height: 8px; border-radius: 4px; background: #157A41"></div>
+<div style="height: 8px; border-radius: 4px; background: #DDE3EA"></div>
+<div style="height: 8px; border-radius: 4px; background: #DDE3EA"></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 14px; font-weight: 700; color: #4B5563"><span>знаком</span><span>уверенно</span><span>освоил</span></div>
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #374151">Повторение завтра поднимет навык до «уверенно».</p>
+</div>
+<div style="background: #14213D; color: #FFFFFF; border-radius: 18px; padding: 18px">
+<div style="font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #C7D2FE">Правило урока</div>
+<p style="margin: 8px 0 0; font-size: 22px; line-height: 1.35; font-weight: 800">Время важнее суммы: проценты начисляются на проценты. Начни с малого, но раньше.</p>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 14px 16px">
+<div><div style="font-size: 15px; color: #4B5563; font-weight: 600">Следующий урок</div><div style="font-size: 18px; font-weight: 800">Инфляция: почему 10% — это не всегда 10%</div></div>
+<span style="flex: none; font-size: 15px; font-weight: 700; color: #4B5563">завтра</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">Расчёты: взнос в конце месяца, проценты раз в месяц; в задании Игоря — раз в год. Доходности условные, не прогноз. Проверено 16.11.2026.</p>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<a href="review.html" style="display: flex; align-items: center; justify-content: center; height: 54px; border-radius: 14px; background: #157A41; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none">Перейти на следующий день</a>
+<button type="button" onClick="{{restart}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Пройти урок заново</button>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  initial() {
+    return { screen: 0, pred: null, term: false, m: 5000, y: 10, r: 10, found: false,
+      est: 100000, estTries: 0, estLast: null, estDone: false, estOk: false, estFirst: false,
+      tm: [null, null, null], am: 3000, ay: 10, task: false };
+  }
+
+  st() {
+    return Object.assign(this.initial(), this.state || {});
+  }
+
+  pickTm(i, v) {
+    var s = this.st();
+    if (s.tm[i] !== null) return;
+    var tm = s.tm.slice();
+    tm[i] = v;
+    this.setState({ tm: tm });
+  }
+
+  renderVals() {
+    var self = this;
+    var st = this.st();
+    var GREEN = '#157A41', GREEN_BG = '#E7F5EC', ORANGE = '#B4410C', ORANGE_BG = '#FDEDE4';
+    var LINE = '#DDE3EA', BLUE = '#1D4ED8', BLUE_BG = '#E8EEFD';
+    var NB = ' ';
+
+    function money(x) {
+      var s = String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g, NB);
+      return s + NB + '₽';
+    }
+    function short(x) {
+      if (x >= 1e6) return (x / 1e6).toFixed(1).replace('.', ',') + NB + 'млн' + NB + '₽';
+      if (x >= 1e4) return Math.round(x / 1000) + NB + 'тыс.' + NB + '₽';
+      return money(x);
+    }
+    function yearsWord(n) {
+      var a = n % 10, b = n % 100;
+      if (a === 1 && b !== 11) return n + NB + 'год';
+      if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return n + NB + 'года';
+      return n + NB + 'лет';
+    }
+    function fv(m, years, ratePct) {
+      var n = years * 12, i = ratePct / 100 / 12;
+      if (i === 0) return m * n;
+      return m * (Math.pow(1 + i, n) - 1) / i;
+    }
+    function crossYear(m, years, ratePct) {
+      for (var k = 1; k <= years; k++) {
+        var t = fv(m, k, ratePct), c = m * 12 * k;
+        if (t - c >= c) return k;
+      }
+      return null;
+    }
+
+    /* Шаг 1: предсказание */
+    var PRED = [
+      { id: 'a', title: 'План А: с 25 лет по 5 000 ₽ в месяц', sub: 'за 30 лет вложит 1,8 млн ₽' },
+      { id: 'b', title: 'План Б: с 35 лет по 10 000 ₽ в месяц', sub: 'за 20 лет вложит 2,4 млн ₽' },
+      { id: 'eq', title: 'Примерно поровну', sub: 'один вкладывает дольше, другой больше' }
+    ];
+    var predOptions = PRED.map(function (o) {
+      var mine = st.pred === o.id;
+      return {
+        title: o.title, sub: o.sub, pressed: mine,
+        border: mine ? BLUE : LINE, bg: mine ? BLUE_BG : '#FFFFFF',
+        pick: function () { self.setState({ pred: o.id }); }
+      };
+    });
+
+    /* Шаг 2: песочница */
+    function setSb(key, val) {
+      var s = self.st();
+      var m = key === 'm' ? val : s.m, y = key === 'y' ? val : s.y, r = key === 'r' ? val : s.r;
+      var patch = {};
+      patch[key] = val;
+      if (!s.found && crossYear(m, y, r) !== null) patch.found = true;
+      self.setState(patch);
+    }
+    var total = fv(st.m, st.y, st.r), contrib = st.m * 12 * st.y;
+    var bars = [];
+    for (var k = 1; k <= st.y; k++) {
+      var tk = fv(st.m, k, st.r), ck = st.m * 12 * k;
+      bars.push({ conH: (ck / total * 130).toFixed(1) + 'px', intH: ((tk - ck) / total * 130).toFixed(1) + 'px' });
+    }
+    var cy = crossYear(st.m, st.y, st.r);
+    var sb = {
+      m: st.m, y: st.y, r: st.r,
+      mLabel: money(st.m), rLabel: st.r + '%', yearsLabel: yearsWord(st.y),
+      contrib: short(contrib), interest: short(total - contrib), total: short(total),
+      bars: bars,
+      aria: 'Рост накоплений за ' + yearsWord(st.y) + ': вложено ' + short(contrib) + ', проценты ' + short(total - contrib),
+      foundText: cy !== null
+        ? 'При ' + st.r + '% в год проценты обгоняют взносы на ' + cy + '-м году. Дальше они растут быстрее, чем ты успеваешь докладывать.'
+        : 'Ты поймал момент, когда проценты обогнали взносы. Дальше они растут быстрее, чем ты успеваешь докладывать.',
+      setM: function (e) { setSb('m', Number(e.target.value)); },
+      setY: function (e) { setSb('y', Number(e.target.value)); },
+      setR: function (e) { setSb('r', Number(e.target.value)); }
+    };
+
+    /* Шаг 2: ответ про Тимура */
+    var REVEAL = {
+      a: { title: 'Ты выбрал план А — верно!', text: 'Тимур вложит меньше, а получит больше: 11,3 млн ₽ против 7,6 млн ₽. Работает не сумма, а время.', ok: true },
+      b: { title: 'Ты выбрал план Б — так отвечает большинство', text: 'Кажется, что раз вложено больше, то и итог больше. Но план А даёт 11,3 млн ₽ против 7,6 млн ₽: у его денег на 10 лет больше времени расти.', ok: false },
+      eq: { title: 'Ты выбрал «примерно поровну»', text: 'Разница почти в 4 млн ₽: план А даёт 11,3 млн ₽, план Б — 7,6 млн ₽. Лишние 10 лет роста весят больше, чем двойной взнос.', ok: false }
+    };
+    var rv = REVEAL[st.pred] || REVEAL.b;
+    var reveal = { title: rv.title, text: rv.text, bg: rv.ok ? GREEN_BG : ORANGE_BG, ink: rv.ok ? GREEN : ORANGE };
+
+    /* Шаг 3: оценка числом */
+    var EST_LO = 550000, EST_HI = 800000;
+    var estFb = { shown: false, title: '', text: '', bg: GREEN_BG, ink: GREEN };
+    if (st.estDone && !st.estOk) {
+      estFb = { shown: true, title: 'Ответ: около 673 000 ₽', text: 'Это в 6,7 раза больше, чем положил Игорь: 573 000 ₽ из них — проценты. Простой рост на 10 000 ₽ в год дал бы только 300 000 ₽.', bg: BLUE_BG, ink: '#1E3A8A' };
+    } else if (st.estOk) {
+      estFb = { shown: true, title: 'Верно!', text: 'Будет около 673 000 ₽ — в 6,7 раза больше, чем положил Игорь. Из них 573 000 ₽ — проценты.', bg: GREEN_BG, ink: GREEN };
+    } else if (st.estLast !== null) {
+      if (st.estLast < 400000) estFb = { shown: true, title: 'Маловато', text: 'Похоже на рост по 10 000 ₽ в год — это было бы 300 000 ₽. Но 10% каждый год считаются от уже выросшей суммы, поэтому прибавка растёт.', bg: ORANGE_BG, ink: ORANGE };
+      else if (st.estLast < EST_LO) estFb = { shown: true, title: 'Ближе, но всё ещё мало', text: 'Каждый год прибавка больше предыдущей, а в конце срока она самая большая. Попробуй ещё.', bg: ORANGE_BG, ink: ORANGE };
+      else estFb = { shown: true, title: 'Многовато', text: 'Рост быстрый, но не настолько. Попробуй меньше.', bg: ORANGE_BG, ink: ORANGE };
+    }
+    var est = {
+      value: st.est, label: money(st.est), locked: st.estDone,
+      fbShown: estFb.shown, fbTitle: estFb.title, fbText: estFb.text, fbBg: estFb.bg, fbInk: estFb.ink,
+      hint: !st.estDone && st.estTries >= 2,
+      canCheck: !st.estDone, canReveal: !st.estDone && st.estTries >= 2, done: st.estDone,
+      set: function (e) { self.setState({ est: Number(e.target.value) }); },
+      check: function () {
+        var s = self.st();
+        if (s.estDone) return;
+        var ok = s.est >= EST_LO && s.est <= EST_HI;
+        self.setState({ estTries: s.estTries + 1, estLast: s.est, estDone: ok, estOk: ok, estFirst: ok && s.estTries === 0 });
+      },
+      reveal: function () { self.setState({ estDone: true, estOk: false, est: 670000 }); }
+    };
+
+    /* Шаг 3: правда или миф */
+    var TM = [
+      { truth: false, text: 'Сложный процент бывает только на бирже', why: 'Вклад или накопительный счёт с капитализацией работают так же: проценты добавляются к сумме, и следующие начисляются уже на них.' },
+      { truth: false, text: 'Если начать на 10 лет позже, хватит вкладывать вдвое больше — итог будет тем же', why: 'У Тимура двойной взнос с 35 лет дал 7,6 млн ₽ против 11,3 млн ₽ при старте в 25. При 10% в год упущенные 10 лет так не догнать.' },
+      { truth: true, text: 'Цены из-за инфляции тоже растут «процент на процент»', why: 'Да: каждый год цены растут от уже выросшего уровня. Поэтому +10% к сумме — ещё не +10% к тому, что на неё можно купить. Об этом следующий урок.' }
+    ];
+    var tmOk = 0;
+    var tmItems = TM.map(function (t, i) {
+      var a = st.tm[i];
+      var done = a !== null;
+      var ok = done && a === t.truth;
+      if (ok) tmOk += 1;
+      var label = t.truth ? 'Правда' : 'Миф';
+      return {
+        text: t.text, open: !done, done: done,
+        head: ok ? label + '. Верно!' : 'На самом деле: ' + label.toLowerCase(),
+        why: t.why, bg: ok ? GREEN_BG : ORANGE_BG, ink: ok ? GREEN : ORANGE,
+        pickTrue: function () { self.pickTm(i, true); },
+        pickMyth: function () { self.pickTm(i, false); }
+      };
+    });
+    var tmAll = st.tm.every(function (x) { return x !== null; });
+
+    /* Шаг 4: свои цифры */
+    var apContrib = st.am * 12 * st.ay;
+    var v0 = fv(st.am, st.ay, 0), v5 = fv(st.am, st.ay, 5), v10 = fv(st.am, st.ay, 10);
+    var ap = {
+      m: st.am, y: st.ay, mLabel: money(st.am), yLabel: yearsWord(st.ay), contrib: short(apContrib),
+      rows: [
+        { label: 'Просто копить (0%)', value: short(v0), width: (v0 / v10 * 100).toFixed(1) + '%', color: '#1E3A8A' },
+        { label: 'Если +5% в год', value: short(v5), width: (v5 / v10 * 100).toFixed(1) + '%', color: '#22A35A' },
+        { label: 'Если +10% в год', value: short(v10), width: '100%', color: GREEN }
+      ],
+      setM: function (e) { self.setState({ am: Number(e.target.value) }); },
+      setY: function (e) { self.setState({ ay: Number(e.target.value) }); }
+    };
+
+    var score = (st.estFirst ? 1 : 0) + tmOk;
+    var pct = Math.round(st.screen / 7 * 100);
+    var reset = function () { self.setState(self.initial()); };
+
+    return {
+      isStart: st.screen === 0, isPredict: st.screen === 1, isSandbox: st.screen === 2, isReveal: st.screen === 3,
+      isEstimate: st.screen === 4, isTm: st.screen === 5, isApply: st.screen === 6, isDone: st.screen === 7,
+      inLesson: st.screen >= 1 && st.screen <= 6,
+      progress: pct + '%', progressNum: pct,
+      streak: st.screen === 7 ? '4' : '3',
+      predOptions: predOptions, predDone: st.pred !== null, predOpen: st.pred === null,
+      termOpen: st.term, toggleTerm: function () { self.setState({ term: !self.st().term }); },
+      sb: sb, sbFound: st.found, sbTaskOpen: !st.found,
+      reveal: reveal,
+      est: est,
+      tmItems: tmItems, tmAll: tmAll, tmLeft: !tmAll,
+      ap: ap, hasTask: st.task, noTask: !st.task, takeTask: function () { self.setState({ task: true }); },
+      score: score, total: 4,
+      start: function () { self.setState({ screen: 1 }); },
+      next: function () { self.setState({ screen: self.st().screen + 1 }); },
+      close: reset, restart: reset
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23157A41'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<title>Финзарядка — следующий день: повторение</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F4F6F8; font-family: 'Manrope', system-ui, sans-serif; color: #14213D">
+
+<sc-if value="{{inCards}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{home}}" aria-label="Закрыть повторение" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div role="progressbar" aria-label="Прогресс повторения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progressNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{progress}}; background: #1D4ED8; border-radius: 6px; transition: width .35s ease"></div></div>
+<span style="flex: none; font-size: 16px; font-weight: 800; color: #4B5563">{{cardNum}} / 3</span>
+</div>
+</sc-if>
+
+<sc-if value="{{isHome}}" hint-placeholder-val="{{true}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">Финзарядка</span>
+<div role="img" aria-label="Серия: 4 дня" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>4</span></div>
+</div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 28px; display: flex; flex-direction: column; gap: 14px">
+<div>
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Следующий день после урока 1</div>
+<h1 style="margin: 4px 0 0; font-size: 28px; line-height: 1.2; font-weight: 800">{{homeTitle}}</h1>
+</div>
+<div style="background: #FFFFFF; border: 2px solid {{rev.border}}; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #E8EEFD; color: #1D4ED8; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 9"></path><path d="M20 4v5h-5"></path><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15"></path><path d="M4 20v-5h5"></path></svg></span>
+<div style="flex: 1; min-width: 0"><div style="font-size: 18px; font-weight: 800">Повторение · Сложный процент</div><div style="font-size: 16px; font-weight: 600; color: #4B5563">{{rev.sub}}</div></div>
+</div>
+<sc-if value="{{rev.due}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{startReview}}" style="height: 50px; border: 0; border-radius: 12px; background: #1D4ED8; color: #FFFFFF; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Начать · ~1 минута</button></sc-if>
+<sc-if value="{{rev.done}}" hint-placeholder-val="{{false}}"><div role="status" style="padding: 10px 12px; border-radius: 10px; background: #E7F5EC; color: #157A41; font-size: 16px; font-weight: 700">Готово. Следующее повторение — {{rev.nextIn}}.</div></sc-if>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800">2</span>
+<div style="flex: 1; min-width: 0"><div style="font-size: 18px; font-weight: 800">Урок 2 · Инфляция и реальная доходность</div><div style="font-size: 16px; font-weight: 600; color: #4B5563">5 минут · раздел «Как растут деньги»</div></div>
+</div>
+<a href="inflation.html" style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 12px; background: #157A41; color: #FFFFFF; font-size: 18px; font-weight: 800; text-decoration: none">Начать урок 2</a>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 17px; font-weight: 800">Навык «Сложный процент»</span><span style="font-size: 15px; font-weight: 800; color: #157A41">{{skill.label}}</span></div>
+<div role="img" aria-label="Ступень навыка: {{skill.label}}" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="height: 8px; border-radius: 4px; background: #157A41"></div>
+<div style="height: 8px; border-radius: 4px; background: {{skill.second}}"></div>
+<div style="height: 8px; border-radius: 4px; background: #DDE3EA"></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 14px; font-weight: 700; color: #4B5563"><span>знаком</span><span>уверенно</span><span>освоил</span></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 17px; font-weight: 800"><span>Цель недели</span><span>{{week.label}}</span></div>
+<div aria-hidden="true" style="height: 10px; border-radius: 5px; background: #F4F6F8; overflow: hidden"><div style="height: 100%; width: {{week.pct}}; background: #157A41; border-radius: 5px"></div></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 17px; font-weight: 800">Задание недели</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.45">Проверь, есть ли у твоего вклада или накопительного счёта капитализация.</p>
+<button type="button" onClick="{{toggleTask}}" aria-pressed="{{taskDone}}" style="height: 44px; border: 2px solid {{taskBorder}}; border-radius: 12px; background: {{taskBg}}; color: #157A41; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">{{taskLabel}}</button>
+</div>
+<a href="compound.html" style="align-self: center; font-size: 16px; font-weight: 800">Пройти урок 1 заново</a>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isCard}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 700; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">{{card.kind}}</div>
+<h2 style="margin: 0; font-size: 22px; line-height: 1.35; font-weight: 800">{{card.text}}</h2>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{card.options}}" as="o" hint-placeholder-count="3">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 54px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; display: flex; flex-direction: column; gap: 4px"><span>{{o.text}}</span><sc-if value="{{o.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size: 15px; font-weight: 800; color: {{o.badgeColor}}">{{o.badge}}</span></sc-if></button>
+</sc-for>
+</div>
+<sc-if value="{{card.answered}}" hint-placeholder-val="{{false}}">
+<div role="status" style="padding: 16px; border-radius: 14px; background: {{card.fbBg}}">
+<div style="font-size: 19px; font-weight: 800; color: {{card.fbInk}}">{{card.fbTitle}}</div>
+<p style="margin: 6px 0 0; font-size: 17px; line-height: 1.45">{{card.fbText}}</p>
+</div>
+<div style="padding: 12px 14px; border-radius: 12px; background: #14213D; color: #FFFFFF; font-size: 16px; line-height: 1.45"><b style="color: #C7D2FE">Правило:</b> время важнее суммы — проценты начисляются на проценты.</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 12px 20px 28px">
+<sc-if value="{{card.answered}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #1D4ED8; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">{{card.nextLabel}}</button></sc-if>
+<sc-if value="{{card.open}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери ответ</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isResult}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 20px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div aria-hidden="true" style="flex: none; width: 64px; height: 64px; border-radius: 50%; background: {{res.iconBg}}; color: {{res.iconInk}}; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></div>
+<div>
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800">{{res.title}}</h1>
+<p style="margin: 4px 0 0; font-size: 17px; color: #374151">Верно: {{res.score}} из 3</p>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 17px; font-weight: 800">Навык «Сложный процент»</span><span style="font-size: 15px; font-weight: 800; color: #157A41">{{skill.label}}</span></div>
+<div role="img" aria-label="Ступень навыка: {{skill.label}}" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="height: 8px; border-radius: 4px; background: #157A41"></div>
+<div style="height: 8px; border-radius: 4px; background: {{skill.second}}"></div>
+<div style="height: 8px; border-radius: 4px; background: #DDE3EA"></div>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #374151">{{res.text}}</p>
+</div>
+<div style="background: #E8EEFD; border-radius: 16px; padding: 16px; font-size: 16px; line-height: 1.5"><b>Почему не надоедает.</b> В каждом повторении новые цифры и ситуации: ответ не запомнить, можно только понять. Нажми «Ещё раз» — карточки соберутся заново.</div>
+</div>
+<div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
+<button type="button" onClick="{{home}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">На главную</button>
+<button type="button" onClick="{{startReview}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Ещё раз с новыми цифрами</button>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  st() {
+    var d = { screen: 0, set: null, ans: [null, null, null], runs: 0, best: 0, task: false };
+    return Object.assign(d, this.state || {});
+  }
+
+  makeSet(runs) {
+    function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+      return a;
+    }
+    var names = shuffle(['Марина', 'Игорь', 'Тимур', 'Валентина Петровна']);
+    var x, n, r, comp, lin, guard = 0;
+    do {
+      x = pick([50000, 100000, 200000, 300000]); n = pick([10, 12, 15, 18, 20, 25]); r = pick([6, 8, 10, 12]);
+      comp = x * Math.pow(1 + r / 100, n); lin = x * (1 + r * n / 100); guard++;
+    } while (comp / lin < 1.25 && guard < 50);
+    var x2 = pick([100000, 150000, 200000, 500000]), r2 = pick([8, 10, 12]), n2 = pick([10, 15, 20]);
+    return {
+      c1: { name: names[0], x: x, n: n, r: r, comp: comp, lin: lin,
+        order: shuffle([{ k: 'ok', v: comp }, { k: 'lin', v: lin }, { k: 'high', v: comp * 1.7 }]) },
+      c2: { name: names[1], x: x2, r: r2, n: n2, lin: x2 * (1 + r2 * n2 / 100), comp: x2 * Math.pow(1 + r2 / 100, n2),
+        order: shuffle(['ok', 'same', 'less']) },
+      c3: { variant: runs % 2, order: shuffle(['ok', 'b', 'c']) }
+    };
+  }
+
+  renderVals() {
+    var self = this;
+    var st = this.st();
+    var GREEN = '#157A41', GREEN_BG = '#E7F5EC', ORANGE = '#B4410C', ORANGE_BG = '#FDEDE4';
+    var LINE = '#DDE3EA', INK = '#14213D', MUTED = '#4B5563';
+    var NB = ' ';
+
+    function money(v) { return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, NB) + NB + '₽'; }
+    function approx(v) {
+      if (v >= 1e6) return '≈' + NB + (v / 1e6).toFixed(1).replace('.', ',') + NB + 'млн' + NB + '₽';
+      return '≈' + NB + Math.round(v / 1000) + NB + 'тыс.' + NB + '₽';
+    }
+    function years(k) {
+      var a = k % 10, b = k % 100;
+      if (a === 1 && b !== 11) return k + NB + 'год';
+      if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return k + NB + 'года';
+      return k + NB + 'лет';
+    }
+
+    var set = st.set;
+    var idx = st.screen - 1;
+    var card = { kind: '', text: '', options: [], answered: false, open: true, fbTitle: '', fbText: '', fbBg: GREEN_BG, fbInk: GREEN, nextLabel: 'Дальше' };
+
+    function opts(list, chosen, key, okKey) {
+      return list.map(function (o) {
+        var answered = chosen !== null, mine = chosen === o.k;
+        var border = LINE, bg = '#FFFFFF', ink = INK, badge = '', badgeColor = MUTED;
+        if (answered && o.k === okKey) { border = GREEN; bg = GREEN_BG; badge = mine ? 'Твой ответ — верно' : 'Правильный ответ'; badgeColor = GREEN; }
+        else if (answered && mine) { border = ORANGE; bg = ORANGE_BG; badge = 'Твой ответ'; badgeColor = ORANGE; }
+        else if (answered) { ink = MUTED; }
+        return { text: o.text, pressed: mine, border: border, bg: bg, ink: ink, badge: badge, badgeColor: badgeColor, hasBadge: badge !== '',
+          pick: function () {
+            var s = self.st();
+            if (s.ans[key] !== null) return;
+            var a = s.ans.slice(); a[key] = o.k; self.setState({ ans: a });
+          } };
+      });
+    }
+
+    if (set && idx >= 0 && idx <= 2) {
+      var chosen = st.ans[idx];
+      if (idx === 0) {
+        var c1 = set.c1;
+        card.kind = 'Карточка 1 · Новые цифры';
+        card.text = c1.name + ' положил' + (c1.name === 'Игорь' || c1.name === 'Тимур' ? '' : 'а') + ' ' + money(c1.x) + ' на ' + years(c1.n) + ' под ' + c1.r + '% годовых, проценты добавляются раз в год. Сколько примерно будет в конце?';
+        card.options = opts(c1.order.map(function (o) { return { k: o.k, text: approx(o.v) }; }), chosen, 0, 'ok');
+        if (chosen === 'ok') { card.fbTitle = 'Верно!'; card.fbText = 'Будет ' + approx(c1.comp) + '. Простой рост без процентов на проценты дал бы только ' + approx(c1.lin) + '.'; }
+        else if (chosen === 'lin') { card.fbTitle = 'Это рост без процентов на проценты'; card.fbText = 'Так было бы, если бы каждый год добавлялось одно и то же — ' + money(c1.x * c1.r / 100) + '. Но прибавка растёт вместе с суммой: выйдет ' + approx(c1.comp) + '.'; }
+        else if (chosen === 'high') { card.fbTitle = 'Многовато'; card.fbText = 'Рост быстрый, но не настолько: будет ' + approx(c1.comp) + '.'; }
+      } else if (idx === 1) {
+        var c2 = set.c2;
+        card.kind = 'Карточка 2 · Найди ошибку';
+        card.text = c2.name + ' считает: «' + money(c2.x) + ' под ' + c2.r + '% на ' + years(c2.n) + ' — это ' + money(c2.x) + ' + ' + c2.n + ' × ' + money(c2.x * c2.r / 100) + ' = ' + money(c2.lin) + '». Проценты добавляются к сумме раз в год. Что не так?';
+        var T2 = { ok: 'Не учтены проценты на проценты — на деле будет больше', same: 'Всё посчитано верно', less: 'Проценты берутся только с первой суммы — на деле будет меньше' };
+        card.options = opts(c2.order.map(function (k) { return { k: k, text: T2[k] }; }), chosen, 1, 'ok');
+        if (chosen !== null) {
+          card.fbTitle = chosen === 'ok' ? 'Верно!' : 'Не совсем';
+          card.fbText = 'С процентами на проценты выйдет ' + approx(c2.comp) + ' — на ' + approx(c2.comp - c2.lin).replace('≈' + NB, '') + ' больше, чем по простой формуле.';
+        }
+      } else {
+        var c3 = set.c3;
+        var V = c3.variant === 0
+          ? { kind: 'Карточка 3 · Новая ситуация', text: 'Тимур копит с 25 до 55 лет и два года не сможет вносить деньги. Когда пропуск обойдётся дороже?',
+              t: { ok: 'В 25–26 лет', b: 'В 53–54 года', c: 'Одинаково — те же два года' },
+              okText: 'Деньги, вложенные в 25 лет, растут 30 лет, а вложенные в 53 — всего пару лет. Ранние взносы работают дольше всех.' }
+          : { kind: 'Карточка 3 · Новая ситуация', text: 'Два вклада под одну ставку на 5 лет. В первом проценты добавляются к сумме, во втором их перечисляют на карту и тратят. Где итог больше?',
+              t: { ok: 'Где проценты добавляются к сумме', b: 'Где проценты приходят на карту', c: 'Одинаково — ставка ведь одна' },
+              okText: 'Проценты, которые остаются во вкладе, сами приносят проценты. Потраченные — уже нет.' };
+        card.kind = V.kind; card.text = V.text;
+        card.options = opts(c3.order.map(function (k) { return { k: k, text: V.t[k] }; }), chosen, 2, 'ok');
+        if (chosen !== null) { card.fbTitle = chosen === 'ok' ? 'Верно!' : 'Не совсем'; card.fbText = V.okText; }
+        card.nextLabel = 'Завершить';
+      }
+      card.answered = chosen !== null; card.open = chosen === null;
+      var good = chosen === 'ok';
+      card.fbBg = good ? GREEN_BG : ORANGE_BG; card.fbInk = good ? GREEN : ORANGE;
+    }
+
+    var score = st.ans.filter(function (a) { return a === 'ok'; }).length;
+    var reviewed = st.runs > 0;
+    var up = st.best >= 2;
+    var skill = { label: up ? 'уверенно' : 'знаком', second: up ? GREEN : LINE };
+    var res = {
+      score: score,
+      title: score >= 2 ? 'Повторение пройдено' : 'Почти получилось',
+      text: score >= 2
+        ? 'Навык вырос до «уверенно». Следующее повторение — через 3 дня, а через неделю придут задачи в новых ситуациях.'
+        : 'Навык пока на ступени «знаком». Завтра повторим ещё раз — с другими цифрами.',
+      iconBg: score >= 2 ? GREEN_BG : ORANGE_BG, iconInk: score >= 2 ? GREEN : ORANGE
+    };
+    var weekMin = reviewed ? 8 : 7;
+    var pct = Math.round(Math.max(0, st.screen - 1) / 3 * 100);
+
+    function startReview() {
+      var s = self.st();
+      self.setState({ screen: 1, set: self.makeSet(s.runs), ans: [null, null, null] });
+    }
+
+    return {
+      isHome: st.screen === 0, isCard: st.screen >= 1 && st.screen <= 3, isResult: st.screen === 4,
+      inCards: st.screen >= 1 && st.screen <= 3,
+      progress: pct + '%', progressNum: pct, cardNum: Math.min(Math.max(st.screen, 1), 3),
+      homeTitle: reviewed ? 'На сегодня главное сделано' : 'Сегодня 2 дела, около 6 минут',
+      rev: { due: !reviewed, done: reviewed, border: reviewed ? LINE : '#1D4ED8',
+        sub: reviewed ? '3 карточки · пройдено' : '3 карточки · цифры каждый раз новые',
+        nextIn: up ? 'через 3 дня' : 'завтра' },
+      skill: skill, res: res,
+      week: { label: weekMin + ' из 30 мин', pct: Math.round(weekMin / 30 * 100) + '%' },
+      taskDone: st.task, taskLabel: st.task ? 'Сделано ✓' : 'Отметить: сделал(а)',
+      taskBorder: st.task ? GREEN : LINE, taskBg: st.task ? GREEN_BG : '#FFFFFF',
+      toggleTask: function () { self.setState({ task: !self.st().task }); },
+      card: card,
+      startReview: startReview,
+      next: function () {
+        var s = self.st();
+        if (s.screen < 3) { self.setState({ screen: s.screen + 1 }); return; }
+        var sc = s.ans.filter(function (a) { return a === 'ok'; }).length;
+        self.setState({ screen: 4, runs: s.runs + 1, best: Math.max(s.best, sc) });
+      },
+      home: function () { self.setState({ screen: 0 }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
