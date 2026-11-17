@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23E7F5EC%22/%3E%3Cg%20transform%3D%22translate%282.2%20-19.9%29%20scale%280.46%29%22%3E%3Cpath%20d%3D%22M14%20136%20L4%20142%20L16%20143%20Z%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2278%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cpath%20d%3D%22M12%20140%20Q12%2078%2054%2078%20Q96%2078%2096%20140%20Z%22%20fill%3D%22%23157A41%22/%3E%3Cpath%20d%3D%22M42%2096%20L66%2096%20L74%20116%20L62%20132%20L46%20132%20L34%20116%20Z%22%20fill%3D%22none%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M42%2096%20L36%2084%20M66%2096%20L72%2084%20M34%20116%20L16%20116%20M74%20116%20L92%20116%20M46%20132%20L42%20140%20M62%20132%20L66%20140%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Crect%20x%3D%228%22%20y%3D%22136%22%20width%3D%2292%22%20height%3D%229%22%20rx%3D%224.5%22%20fill%3D%22%230E5A2F%22/%3E%3Ccircle%20cx%3D%22106%22%20cy%3D%22112%22%20r%3D%2220%22%20fill%3D%22%238FCB6B%22/%3E%3Ccircle%20cx%3D%2299%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22113%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22114%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22101%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Cpath%20d%3D%22M100%20124%20Q107%20129%20114%20124%22%20fill%3D%22none%22%20stroke%3D%22%2314213D%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3C/svg%3E">
+
+<title>Финзарядка — урок 7 «Фонды: корзина за одну покупку»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+button,a.fz-btn{transition:transform .06s ease, box-shadow .06s ease}
+button:not(:disabled):active,a.fz-btn:active{transform:translateY(3px);box-shadow:none !important}
+@keyframes fzpop{0%{transform:translateY(6px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes fzwob{0%,100%{transform:rotate(0)}30%{transform:rotate(-4deg)}60%{transform:rotate(3deg)}}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #FBF7F0; font-family: 'Nunito', system-ui, sans-serif; color: #14213D">
+
+<sc-if value="{{inLesson}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{close}}" aria-label="Закрыть урок" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #6B7280; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div role="progressbar" aria-label="Прогресс урока" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progressNum}}" style="flex: 1; height: 16px; border-radius: 8px; background: #EAE3D5; overflow: hidden"><div style="height: 100%; width: {{progress}}; background: #157A41; border-radius: 8px; transition: width .35s ease; box-shadow: inset 0 -4px 0 rgba(0,0,0,.12)"></div></div>
+<div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStart}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between"><span style="font-size: 22px; font-weight: 900; color: #157A41">Финзарядка</span><div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div></div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Инвестиции · Основа · Урок 7</div><div style="display: flex; align-items: flex-end; gap: 6px"><div aria-hidden="true" style="flex: none; display: flex"><svg width="132" height="92" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q122 142 134 120" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><path d="M141 112 Q146 118 143 126 M146 104 Q153 116 149 130" fill="none" stroke="#9AA5B1" stroke-width="2" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/></svg></div><div style="flex: 1; min-width: 0; margin-bottom: 40px; padding: 10px 12px; border-radius: 16px 16px 16px 4px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; line-height: 1.4; font-weight: 700">{{hello}}</div></div><h1 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 900">Фонды: корзина за одну покупку</h1><p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Как владеть кусочком десятков компаний, если денег всего на пару акций.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">6 минут</span><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">Гонка черепах</span><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">Навык: фонды</span></div></div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+<button type="button" onClick="{{start}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Начать урок</button></div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isPuzzle}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 1 из 4 · Попробуй</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Собери корзину из 10 компаний на 10 000 ₽</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Тимур не хочет зависеть от одной компании и решил купить понемногу каждую из десяти. Акции продаются лотами — пачками по несколько штук. Нажимай, чтобы купить по лоту.</p>
+<div style="position: sticky; top: 0; z-index: 2; padding: 10px 12px; border-radius: 16px; background: #FFFFFF; border: 2px solid #EAE3D5; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 16px; font-weight: 800"><span>Осталось денег</span><span style="color: {{pz.leftInk}}">{{pz.left}}</span></div>
+<div style="height: 12px; border-radius: 6px; background: #EEE8DC; overflow: hidden"><div style="height: 100%; width: {{pz.leftPct}}; background: {{pz.leftInk}}; border-radius: 6px; transition: width .3s ease"></div></div>
+<div style="font-size: 15px; font-weight: 700; color: #4B5563">В корзине: {{pz.count}} из 10 компаний</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{pz.tiles}}" as="t" hint-placeholder-count="10">
+<button type="button" onClick="{{t.tap}}" aria-pressed="{{t.on}}" style="min-height: 72px; box-sizing: border-box; text-align: left; padding: 10px 12px; border-radius: 16px; border: 2px solid {{t.border}}; background: {{t.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 2px; box-shadow: 0 3px 0 {{t.border}}; animation: {{t.anim}}">
+<span style="font-size: 16px; font-weight: 900">{{t.name}}</span>
+<span style="font-size: 15px; font-weight: 700; color: {{t.sub}}">{{t.label}}</span>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{pz.done}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{pz.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{pz.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{pz.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{pz.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{pz.fb.ink}}">{{pz.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{pz.fb.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{pz.done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Как же быть?</button></sc-if>
+<sc-if value="{{pz.wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Попробуй собрать все 10</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isFund}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 1 из 4 · Попробуй</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Как Тимуру купить кусочек всех десяти за 10 000 ₽?</h2>
+<div style="display: flex; flex-direction: column; gap: 10px"><sc-for list="{{p2Opts}}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 56px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{o.border}}"><span>{{o.text}}</span><sc-if value="{{o.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size: 15px; font-weight: 800; color: {{o.badgeColor}}">{{o.badge}}</span></sc-if></button></sc-for></div>
+<sc-if value="{{p2Done}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{p2Fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{p2Fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{p2Fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{p2Fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{p2Fb.ink}}">{{p2Fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{p2Fb.text}}</p></div></div></sc-if>
+<sc-if value="{{p2Done}}" hint-placeholder-val="{{false}}">
+<div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 14px">
+<svg width="96" height="80" viewBox="0 0 96 80" aria-hidden="true" style="flex: none"><circle cx="24" cy="30" r="9" fill="#1D4ED8"></circle><circle cx="40" cy="24" r="9" fill="#F2B705"></circle><circle cx="56" cy="28" r="9" fill="#B4410C"></circle><circle cx="72" cy="24" r="9" fill="#7C3AED"></circle><circle cx="32" cy="38" r="9" fill="#0E7490"></circle><circle cx="48" cy="40" r="9" fill="#DB2777"></circle><circle cx="64" cy="38" r="9" fill="#4B5563"></circle><path d="M8 40 H88 L80 74 H16 Z" fill="#D9963F"></path><path d="M14 50 H82 M18 62 H78" stroke="#B9772B" stroke-width="3"></path><path d="M30 40 Q48 4 66 40" fill="none" stroke="#B9772B" stroke-width="4"></path></svg>
+<div style="font-size: 17px; line-height: 1.45">Фонд собирает деньги тысяч людей и покупает всё сразу. Ты покупаешь <b>пай</b> — долю в этой корзине.</div>
+</div>
+<div style="font-size: 17px; line-height: 1.45">Такие фонды торгуются на бирже, их называют <b>БПИФ</b> — биржевые паевые инвестиционные фонды. Покупаются в приложении брокера, как обычные акции.</div>
+</div>
+</sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{p2Done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{p2Wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Выбери ответ</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isRace}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Разбери</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Гонка двух черепах</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Тиша и её брат Шустрик вложили по 100 000 ₽ в два одинаковых фонда на индекс. Рынок даёт обоим 10% в год. Разница одна — комиссия: у Тиши 0,5% в год, у Шустрика 2,5%.</p>
+<sc-if value="{{p3Wait}}" hint-placeholder-val="{{true}}">
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Насколько Шустрик отстанет за 30 лет?</h2>
+</sc-if>
+<div style="display: flex; flex-direction: column; gap: 10px"><sc-for list="{{p3Opts}}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 56px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{o.border}}"><span>{{o.text}}</span><sc-if value="{{o.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size: 15px; font-weight: 800; color: {{o.badgeColor}}">{{o.badge}}</span></sc-if></button></sc-for></div>
+<sc-if value="{{p3Done}}" hint-placeholder-val="{{false}}">
+<div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 20px; font-weight: 900">Год {{race.year}}</span><span style="font-size: 15px; font-weight: 800; color: #6B7280">финиш — 30 лет</span></div>
+<sc-for list="{{race.lanes}}" as="r" hint-placeholder-count="2">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 16px; font-weight: 800"><span>{{r.name}} · комиссия {{r.fee}}</span><span style="color: {{r.ink}}">{{r.amount}}</span></div>
+<div style="position: relative; height: 48px; border-radius: 24px; background: #F3EEE4">
+<div style="position: absolute; top: 2px; left: calc((100% - 44px) * {{r.frac}}); transition: left .5s ease"><sc-if value="{{r.tisha}}" hint-placeholder-val="{{true}}"><svg width="44" height="44" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M100 124 Q107 129 114 124" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{r.bro}}" hint-placeholder-val="{{false}}"><svg width="44" height="44" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#E8EEFD"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M100 124 Q107 129 114 124" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#1D4ED8"/></g></svg></sc-if></div>
+</div>
+</div>
+</sc-for>
+<sc-if value="{{race.running}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{race.step}}" style="width: 100%; min-height: 50px; box-sizing: border-box; padding: 0 16px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Прошло 5 лет →</button></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{race.done}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{race.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{race.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{race.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{race.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{race.fb.ink}}">{{race.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{race.fb.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{race.done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{race.wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">{{race.waitText}}</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isQuick}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 3 из 4 · Вспомни</div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="font-size: 20px; font-weight: 900">Быстрый раунд</span><span style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FEF3C7; font-size: 16px; font-weight: 900; color: #8A5A00">Серия: {{qr.combo}}</span></div>
+<div style="font-size: 16px; font-weight: 800; color: #6B7280">Утверждение {{qr.num}} из 5 · правда или миф?</div>
+<div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 24px; padding: 20px 18px; box-shadow: 0 6px 0 #EAE3D5"><p style="margin: 0; font-size: 21px; line-height: 1.35; font-weight: 800">{{qr.text}}</p></div>
+<sc-if value="{{qr.asking}}" hint-placeholder-val="{{true}}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" onClick="{{qr.myth}}" style="min-height: 60px; border-radius: 18px; border: 2px solid #B4410C; background: #FDEDE4; color: #B4410C; font-family: inherit; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #B4410C">Миф</button>
+<button type="button" onClick="{{qr.truth}}" style="min-height: 60px; border-radius: 18px; border: 2px solid #157A41; background: #E7F5EC; color: #157A41; font-family: inherit; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #157A41">Правда</button>
+</div>
+</sc-if>
+<sc-if value="{{qr.answered}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{qr.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{qr.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{qr.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{qr.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{qr.fb.ink}}">{{qr.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{qr.fb.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{qr.canNext}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{qr.nextQ}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Следующее →</button></sc-if>
+<sc-if value="{{qr.finished}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{qr.asking}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Правда или миф?</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isApply}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 4 из 4 · Примени к себе</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Выбираешь фонд в приложении брокера. На что смотреть?</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Отметь всё важное. Ловушек тут несколько.</p>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{lbl.items}}" as="f" hint-placeholder-count="5">
+<button type="button" onClick="{{f.toggle}}" aria-pressed="{{f.on}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{f.border}}; background: {{f.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{f.border}}">
+<span style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; box-sizing: border-box; border-radius: 8px; border: 2px solid {{f.boxBorder}}; background: {{f.boxBg}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 900">{{f.mark}}</span><span style="font-size: 18px; font-weight: 700; line-height: 1.35">{{f.text}}</span></span>
+<sc-if value="{{f.showVerdict}}" hint-placeholder-val="{{false}}"><span style="padding-left: 38px; font-size: 16px; font-weight: 700; line-height: 1.4; color: {{f.verdictInk}}">{{f.verdict}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{lbl.checked}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{lbl.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{lbl.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{lbl.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{lbl.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{lbl.fb.ink}}">{{lbl.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{lbl.fb.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{lbl.checked}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Завершить урок</button></sc-if>
+<sc-if value="{{lbl.canCheck}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{lbl.check}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Проверить</button></sc-if>
+<sc-if value="{{lbl.empty}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Отметь хотя бы один пункт</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between"><span style="font-size: 22px; font-weight: 900; color: #157A41">Финзарядка</span><div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div></div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px"><div aria-hidden="true" style="flex: none; display: flex"><svg width="110" height="77" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q128 138 136 100" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/><path d="M26 66 Q27.5 70.5 32 72 Q27.5 73.5 26 78 Q24.5 73.5 20 72 Q24.5 70.5 26 66 Z" fill="#F2B705"/><path d="M70 59.5 Q71.125 62.875 74.5 64 Q71.125 65.125 70 68.5 Q68.875 65.125 65.5 64 Q68.875 62.875 70 59.5 Z" fill="#F2B705"/><path d="M120 73 Q121.25 76.75 125 78 Q121.25 79.25 120 83 Q118.75 79.25 115 78 Q118.75 76.75 120 73 Z" fill="#F2B705"/></svg></div><div><h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 900">Урок пройден!</h1><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.4; color: #374151">{{doneSub}}</p></div></div><div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px"><div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 16px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 900; color: #B4410C">{{streak}} дней</div><div style="font-size: 15px; color: #4B5563; font-weight: 700">серия</div></div><div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 16px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 900">{{score}} из {{total}}</div><div style="font-size: 15px; color: #4B5563; font-weight: 700">верно с первой попытки</div></div></div><div style="background: #14213D; color: #FFFFFF; border-radius: 20px; padding: 18px"><div style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: #C7D2FE">Правило урока</div><p style="margin: 8px 0 0; font-size: 22px; line-height: 1.35; font-weight: 800">Фонд — корзина, где уже лежат десятки компаний. Один пай — кусочек каждой. Смотри, что внутри и сколько фонд берёт за год.</p></div><p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">Компании, цены лотов, фонды и комиссии в уроке условные.</p></div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+<a class="fz-btn" href="broker.html" style="display: flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; box-shadow: 0 4px 0 #0E5A2F; text-decoration: none">Следующий урок: брокер и налог</a><button type="button" onClick="{{restart}}" style="width: 100%; min-height: 50px; box-sizing: border-box; padding: 0 16px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Пройти урок заново</button></div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+
+class Component extends DCLogic {
+  initial() {
+    return { screen: 0, bought: [], blocked: 0, shake: -1, p2: null, p3: null, year: 0, qi: 0, qAns: [null, null, null, null, null],
+      lab: [false, false, false, false, false], labChecked: false };
+  }
+
+  st() { return Object.assign(this.initial(), this.state || {}); }
+
+  C() {
+    return { GREEN: '#157A41', GREEN_BG: '#E7F5EC', ORANGE: '#B4410C', ORANGE_BG: '#FDEDE4', LINE: '#EAE3D5', INK: '#14213D',
+      MUTED: '#4B5563', BLUE: '#1D4ED8', BLUE_BG: '#E8EEFD', SUN: '#8A5A00', SUN_BG: '#FEF3C7' };
+  }
+
+  fb(ok, title, text) {
+    var c = this.C();
+    return { title: title, text: text, bg: ok ? c.GREEN_BG : c.ORANGE_BG, ink: ok ? c.GREEN : c.ORANGE, tGood: !!ok, tBad: !ok, tCalm: false };
+  }
+
+  note(title, text) {
+    var c = this.C();
+    return { title: title, text: text, bg: c.BLUE_BG, ink: c.BLUE, tGood: false, tBad: false, tCalm: true };
+  }
+
+  choice(key, opts) {
+    var self = this, c = this.C(), cur = this.st()[key];
+    var answered = cur !== null && cur !== undefined;
+    return opts.map(function (o) {
+      var mine = cur === o.id, border = c.LINE, bg = '#FFFFFF', ink = c.INK, badge = '', badgeColor = c.MUTED;
+      if (answered && o.ok) { border = c.GREEN; bg = c.GREEN_BG; badge = mine ? 'Твой ответ — верно' : 'Правильный ответ'; badgeColor = c.GREEN; }
+      else if (answered && mine) { border = c.ORANGE; bg = c.ORANGE_BG; badge = 'Твой ответ'; badgeColor = c.ORANGE; }
+      else if (answered) { ink = c.MUTED; }
+      return { text: o.text, pressed: mine, border: border, bg: bg, ink: ink, badge: badge, badgeColor: badgeColor, hasBadge: badge !== '',
+        pick: function () {
+          var s = self.st();
+          if (s[key] !== null && s[key] !== undefined) return;
+          var p = {}; p[key] = o.id; self.setState(p);
+        } };
+    });
+  }
+
+  picked(key) { var v = this.st()[key]; return v !== null && v !== undefined; }
+
+  okOf(key, opts) { var v = this.st()[key]; return opts.some(function (o) { return o.ok && o.id === v; }); }
+
+  money(x) { return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0') + '\u00a0₽'; }
+
+  common(screens) {
+    var self = this, st = this.st();
+    var pct = Math.round(Math.min(st.screen, screens) / screens * 100);
+    var reset = function () { self.setState(self.initial()); };
+    return {
+      inLesson: st.screen >= 1 && st.screen < screens, isStart: st.screen === 0, isDone: st.screen === screens,
+      progress: pct + '%', progressNum: pct, streak: st.screen === screens ? '8' : '7',
+      start: function () { self.setState({ screen: 1 }); },
+      next: function () { self.setState({ screen: self.st().screen + 1 }); },
+      close: reset, restart: reset
+    };
+  }
+
+  renderVals() {
+    var self = this, st = this.st(), c = this.C();
+    var base = this.common(6);
+
+    /* 1. Головоломка */
+    var CO = [['Нефтегаз', 7400], ['Банк «Север»', 3100], ['Металлург', 12500], ['Ритейл-Плюс', 6900], ['ТелеКом', 2800],
+      ['Энергосеть', 900], ['Агрохим', 9800], ['Золотодобыча', 13200], ['IT-платформа', 4300], ['Транспорт', 1600]];
+    var spent = st.bought.reduce(function (s, i) { return s + CO[i][1]; }, 0), left = 10000 - spent;
+    var pzDone = st.blocked >= 1;
+    var pz = {
+      left: this.money(left), leftPct: (left / 100) + '%', leftInk: left < 2000 ? c.ORANGE : c.GREEN, count: st.bought.length,
+      tiles: CO.map(function (co, i) {
+        var on = st.bought.indexOf(i) >= 0, cant = !on && co[1] > left;
+        return { name: co[0], on: on, label: on ? 'Куплено · ' + self.money(co[1]) : (cant ? 'Лот ' + self.money(co[1]) + ' · не хватает' : 'Лот ' + self.money(co[1])),
+          border: on ? c.GREEN : (cant ? c.LINE : c.LINE), bg: on ? c.GREEN_BG : (cant ? '#F3EEE4' : '#FFFFFF'), sub: on ? c.GREEN : (cant ? c.ORANGE : c.MUTED),
+          anim: st.shake === i ? 'fzwob .35s ease' : 'none',
+          tap: function () {
+            var s = self.st(), sp = s.bought.reduce(function (a, k) { return a + CO[k][1]; }, 0);
+            if (s.bought.indexOf(i) >= 0) { self.setState({ bought: s.bought.filter(function (k) { return k !== i; }), shake: -1 }); return; }
+            if (CO[i][1] > 10000 - sp) { self.setState({ blocked: s.blocked + 1, shake: i }); return; }
+            self.setState({ bought: s.bought.concat([i]), shake: -1 });
+          } };
+      }),
+      done: pzDone, wait: !pzDone,
+      fb: this.note('Вышло только ' + st.bought.length + ' из 10', 'Чтобы купить по лоту всех десяти, нужно 62 500 ₽. И доли получились бы кривыми: в Золотодобычу 13 200 ₽, а в Энергосеть — 900 ₽.')
+    };
+
+    /* 2. Фонд */
+    var P2 = [
+      { id: 'a', text: 'Копить пять лет' },
+      { id: 'b', text: 'Купить пай фонда: внутри уже лежат все 10 компаний', ok: true },
+      { id: 'c', text: 'Взять кредит на недостающие 52 500 ₽' }
+    ];
+    var p2ok = this.okOf('p2', P2);
+    var p2Fb = this.fb(p2ok, p2ok ? 'Верно — купить фонд' : 'Есть способ проще', 'Фонд на индекс уже держит все компании в нужных долях. Один пай — кусочек каждой.');
+
+    /* 3. Гонка */
+    var P3 = [
+      { id: 'a', text: 'На 2% — разница же всего 2%' },
+      { id: 'b', text: 'Примерно на 10%' },
+      { id: 'c', text: 'Больше чем на треть', ok: true }
+    ];
+    var p3ok = this.okOf('p3', P3);
+    var y = st.year;
+    var A = 100000 * Math.pow(1.095, y), B = 100000 * Math.pow(1.075, y), MAX = 100000 * Math.pow(1.095, 30);
+    var A30 = MAX, B30 = 100000 * Math.pow(1.075, 30);
+    var lagPct = Math.round((1 - B30 / A30) * 100);
+    var raceDone = y >= 30;
+    var race = {
+      year: y, running: y < 30,
+      lanes: [
+        { name: 'Тиша', fee: '0,5%', amount: this.money(A), ink: c.GREEN, frac: (A / MAX).toFixed(3), tisha: true, bro: false },
+        { name: 'Шустрик', fee: '2,5%', amount: this.money(B), ink: c.ORANGE, frac: (B / MAX).toFixed(3), tisha: false, bro: true }
+      ],
+      step: function () { var s = self.st(); if (s.year < 30) self.setState({ year: s.year + 5 }); },
+      done: raceDone, wait: !raceDone, waitText: this.picked('p3') ? 'Доведи гонку до финиша' : 'Сначала угадай',
+      fb: this.fb(p3ok, 'Шустрик отстал на ' + this.money(A30 - B30),
+        'Это ' + lagPct + '% от результата Тиши. Комиссия списывается каждый год — даже когда фонд падает — и съедает сложный процент.')
+    };
+
+    /* 4. Быстрый раунд */
+    var QS = [
+      { t: 'Один пай фонда на индекс — это кусочек сразу всех компаний индекса.', truth: true, why: 'Так и есть: фонд держит все бумаги индекса, а пай — доля в фонде.' },
+      { t: 'Фонд гарантирует доход.', truth: false, why: 'Фонд на акции падает вместе с рынком. Гарантий нет.' },
+      { t: 'Комиссию фонд берёт, даже когда сам в минусе.', truth: true, why: 'Комиссия — процент от денег в фонде, а не от прибыли.' },
+      { t: 'Если управляющая компания обанкротится, деньги фонда пропадут.', truth: false, why: 'Имущество фонда учитывается отдельно от денег управляющей компании, в специализированном депозитарии. При её банкротстве оно не пропадает.' },
+      { t: 'Чем больше компаний в фонде, тем меньше вредит падение одной из них.', truth: true, why: 'Это и есть диверсификация: беда одной компании — лишь маленький кусочек корзины.' }
+    ];
+    var qi = Math.min(st.qi, 4), q = QS[qi], qa = st.qAns[qi];
+    var combo = 0;
+    for (var k = 0; k < 5; k++) { if (st.qAns[k] === null) break; combo = st.qAns[k] === QS[k].truth ? combo + 1 : 0; }
+    var qRight = st.qAns.filter(function (a, k) { return a !== null && a === QS[k].truth; }).length;
+    var qFinished = st.qAns.every(function (a) { return a !== null; });
+    var answerQ = function (v) {
+      return function () { var s = self.st(), k = Math.min(s.qi, 4); if (s.qAns[k] !== null) return; var a = s.qAns.slice(); a[k] = v; self.setState({ qAns: a }); };
+    };
+    var qr = {
+      num: qi + 1, text: q.t, combo: combo, asking: qa === null, answered: qa !== null,
+      fb: qa === null ? this.note('', '') : this.fb(qa === q.truth, (qa === q.truth ? 'Верно! ' : 'Мимо. ') + (q.truth ? 'Это правда' : 'Это миф'), q.why),
+      canNext: qa !== null && st.qi < 4, finished: qFinished,
+      truth: answerQ(true), myth: answerQ(false),
+      nextQ: function () { var s = self.st(); if (s.qi < 4) self.setState({ qi: s.qi + 1 }); }
+    };
+
+    /* 5. Этикетка фонда */
+    var LB = [
+      { t: 'Что внутри: индекс или «стратегия управляющего»', good: true, why: 'Фонд на индекс понятен и обычно дешевле.' },
+      { t: 'Комиссия в год', good: true, why: 'Вспомни гонку: 2% в год за 30 лет — минус треть результата.' },
+      { t: 'Доходность за прошлый год — чем выше, тем лучше', good: false, why: 'Прошлый рост не обещает будущего. Часто это просто удачный год рынка.' },
+      { t: 'Насколько фонд большой и давно ли работает', good: true, why: 'Крупный фонд с историей вряд ли внезапно закроется.' },
+      { t: 'Реклама с обещанием «обогнать рынок»', good: false, why: 'Обещать это может кто угодно. Большинство активных фондов рынок не обгоняет.' }
+    ];
+    var chosen = st.lab.filter(function (x) { return x; }).length;
+    var labRight = LB.filter(function (f, i) { return st.lab[i] === f.good; }).length;
+    var lbl = {
+      items: LB.map(function (f, i) {
+        var on = st.lab[i], border = on ? c.BLUE : c.LINE, bg = on ? c.BLUE_BG : '#FFFFFF', verdict = '', vInk = c.MUTED;
+        if (st.labChecked) {
+          var right = on === f.good;
+          border = right ? c.GREEN : c.ORANGE; bg = right ? c.GREEN_BG : c.ORANGE_BG; vInk = right ? c.GREEN : c.ORANGE;
+          verdict = (f.good ? (on ? 'Да, важно. ' : 'Это важно. ') : (on ? 'Ловушка. ' : 'Верно, не важно. ')) + f.why;
+        }
+        return { text: f.t, on: on, mark: on ? '✓' : '', border: border, bg: bg, boxBorder: on ? c.BLUE : '#6B7280', boxBg: on ? c.BLUE : '#FFFFFF',
+          showVerdict: st.labChecked, verdict: verdict, verdictInk: vInk,
+          toggle: function () { var s = self.st(); if (s.labChecked) return; var a = s.lab.slice(); a[i] = !a[i]; self.setState({ lab: a }); } };
+      }),
+      checked: st.labChecked, canCheck: !st.labChecked && chosen > 0, empty: !st.labChecked && chosen === 0,
+      check: function () { self.setState({ labChecked: true }); },
+      fb: this.fb(labRight === 5, labRight === 5 ? 'Чистая победа: 5 из 5' : 'Верно ' + labRight + ' из 5', 'Важны три вещи: что внутри, комиссия и надёжность фонда. Прошлая доходность и реклама — не критерии.')
+    };
+
+    var score = (p2ok ? 1 : 0) + (p3ok ? 1 : 0) + (qRight >= 4 ? 1 : 0) + (labRight === 5 ? 1 : 0);
+    return Object.assign(base, {
+      hello: 'Покажу фокус: как купить 10 компаний на 10 000 ₽.',
+      isPuzzle: st.screen === 1, isFund: st.screen === 2, isRace: st.screen === 3, isQuick: st.screen === 4, isApply: st.screen === 5,
+      pz: pz, p2Opts: this.choice('p2', P2), p2Done: this.picked('p2'), p2Wait: !this.picked('p2'), p2Fb: p2Fb,
+      p3Opts: this.choice('p3', P3), p3Done: this.picked('p3'), p3Wait: !this.picked('p3'), race: race,
+      qr: qr, lbl: lbl,
+      doneSub: 'Быстрый раунд: ' + qRight + ' из 5.', score: score, total: 4
+    });
+  }
+}
+</script>
+</body>
+</html>
+

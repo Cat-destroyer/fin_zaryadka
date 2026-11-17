@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F4F6F8">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23157A41'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23E7F5EC%22/%3E%3Cg%20transform%3D%22translate%282.2%20-19.9%29%20scale%280.46%29%22%3E%3Cpath%20d%3D%22M14%20136%20L4%20142%20L16%20143%20Z%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2278%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cpath%20d%3D%22M12%20140%20Q12%2078%2054%2078%20Q96%2078%2096%20140%20Z%22%20fill%3D%22%23157A41%22/%3E%3Cpath%20d%3D%22M42%2096%20L66%2096%20L74%20116%20L62%20132%20L46%20132%20L34%20116%20Z%22%20fill%3D%22none%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M42%2096%20L36%2084%20M66%2096%20L72%2084%20M34%20116%20L16%20116%20M74%20116%20L92%20116%20M46%20132%20L42%20140%20M62%20132%20L66%20140%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Crect%20x%3D%228%22%20y%3D%22136%22%20width%3D%2292%22%20height%3D%229%22%20rx%3D%224.5%22%20fill%3D%22%230E5A2F%22/%3E%3Ccircle%20cx%3D%22106%22%20cy%3D%22112%22%20r%3D%2220%22%20fill%3D%22%238FCB6B%22/%3E%3Ccircle%20cx%3D%2299%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22113%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22114%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22101%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Cpath%20d%3D%22M100%20124%20Q107%20129%20114%20124%22%20fill%3D%22none%22%20stroke%3D%22%2314213D%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3C/svg%3E">
 
 <title>Финзарядка — вход и карта трека «Инвестиции»</title>
 <script src="./support.js"></script>
@@ -13,40 +13,59 @@
 <body>
 <x-dc>
 <helmet>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 a{color:#1D4ED8}a:hover{color:#1E3A8A}
+button,a.fz-btn{transition:transform .06s ease, box-shadow .06s ease}
+button:not(:disabled):active,a.fz-btn:active{transform:translateY(3px);box-shadow:none !important}
+@keyframes fzpop{0%{transform:translateY(6px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes fzwob{0%,100%{transform:rotate(0)}30%{transform:rotate(-4deg)}60%{transform:rotate(3deg)}}
 </style>
 </helmet>
-<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F4F6F8; font-family: 'Manrope', system-ui, sans-serif; color: #14213D">
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #FBF7F0; font-family: 'Nunito', system-ui, sans-serif; color: #14213D">
 
 <sc-if value="{{inSetup}}" hint-placeholder-val="{{false}}">
 <div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
 <button type="button" onClick="{{back}}" aria-label="Назад" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
-<div role="progressbar" aria-label="Настройка" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{setupNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{setupPct}}; background: #157A41; border-radius: 6px; transition: width .35s ease"></div></div>
+<div role="progressbar" aria-label="Настройка" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{setupNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #EAE3D5; overflow: hidden"><div style="height: 100%; width: {{setupPct}}; background: #157A41; border-radius: 6px; transition: width .35s ease"></div></div>
 <div style="flex: none; width: 44px"></div>
 </div>
 </sc-if>
 
 <sc-if value="{{isWelcome}}" hint-placeholder-val="{{true}}">
 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
-<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 56px 24px 20px; display: flex; flex-direction: column; gap: 20px">
-<div aria-hidden="true" style="width: 80px; height: 80px; border-radius: 24px; background: #157A41; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M6 16v-2M10 16v-4M14 16V9M18 16V5"></path></svg></div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 18px 22px 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-size: 21px; font-weight: 800; color: #157A41">Финзарядка</span>
+<span style="padding: 5px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 14px; font-weight: 700; color: #4B5563">Тестовая версия</span>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 4px">
+<div aria-hidden="true" style="flex: none; display: flex; margin-top: 18px"><svg width="150" height="105" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q122 142 134 120" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><path d="M141 112 Q146 118 143 126 M146 104 Q153 116 149 130" fill="none" stroke="#9AA5B1" stroke-width="2" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/></svg></div>
+<div style="flex: 1; min-width: 0; padding: 10px 12px; border-radius: 16px 16px 16px 4px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 16px; line-height: 1.4; font-weight: 600">Привет! Я Тиша. Разберёмся в деньгах без спешки.</div>
+</div>
 <div>
-<div style="font-size: 17px; font-weight: 800; color: #157A41">Финзарядка</div>
-<h1 style="margin: 6px 0 0; font-size: 32px; line-height: 1.15; font-weight: 800; letter-spacing: -0.01em">Инвестиции по 5 минут в день</h1>
+<h1 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em">Учимся разбираться в деньгах</h1>
+<p style="margin: 8px 0 0; font-size: 18px; line-height: 1.45; color: #374151">Вклады, инфляция, инвестиции и защита от мошенников. Короткие уроки-задачки — по 5 минут в день.</p>
 </div>
-<div style="display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Ситуации из жизни, а не лекции</span></div>
-<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Сначала пробуешь сам, потом разбираешь на ползунках</span></div>
-<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Без регистрации: прогресс хранится на телефоне</span></div>
-<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.45"><span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: #E7F5EC; color: #157A41; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span><span>Ничего не продаём и не говорим «купи X»</span></div>
+<div style="background: #FFFFFF; border: 1px solid #EAE3D5; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 800; color: #4B5563; text-transform: uppercase; letter-spacing: .04em">Задачка для разминки</div>
+<div style="font-size: 18px; font-weight: 700; line-height: 1.4">Вклад принёс 10% за год, а цены за этот год выросли на 8%. Насколько ты на самом деле стал богаче?</div>
+<sc-for list="{{warm.options}}" as="o" hint-placeholder-count="3">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 52px; box-sizing: border-box; text-align: left; padding: 12px 14px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 3px 0 {{o.border}}">{{o.text}}</button>
+</sc-for>
+<sc-if value="{{warm.answered}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{warm.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{warm.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{warm.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{warm.bg}}">
+<div style="font-size: 18px; font-weight: 800; color: {{warm.ink}}">{{warm.title}}</div>
+<p style="margin: 4px 0 0; font-size: 16px; line-height: 1.45">{{warm.text}}</p>
+</div></div>
+</sc-if>
 </div>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">Это учебный тренажёр: внести сюда деньги нельзя, и мы не советуем, что покупать.</p>
 </div>
 <div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
-<button type="button" onClick="{{go1}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Начать</button>
-<button type="button" onClick="{{toMap}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Сразу к карте трека</button>
+<button type="button" onClick="{{go1}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Начать обучение</button>
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 48px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Сразу к карте трека</button>
 </div>
 </div>
 </sc-if>
@@ -58,18 +77,18 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <p style="margin: 0; font-size: 17px; line-height: 1.45; color: #4B5563">От ответа зависит, с чего начнём. Поменять можно в любой момент.</p>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <sc-for list="{{goals}}" as="g" hint-placeholder-count="4">
-<button type="button" onClick="{{g.pick}}" aria-pressed="{{g.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{g.border}}; background: {{g.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 800">{{g.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563">{{g.sub}}</span></button>
+<button type="button" onClick="{{g.pick}}" aria-pressed="{{g.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{g.border}}; background: {{g.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 3px 0 {{g.border}}"><span style="font-size: 18px; font-weight: 800">{{g.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563">{{g.sub}}</span></button>
 </sc-for>
 </div>
-<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE3EA; display: flex; flex-direction: column; gap: 10px">
+<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #EAE3D5; display: flex; flex-direction: column; gap: 10px">
 <div style="font-size: 16px; line-height: 1.45; color: #374151"><b>Нужно другое?</b> Вклады, кредиты и налоги появятся позже.</div>
-<sc-if value="{{noWish}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{makeWish}}" style="align-self: flex-start; height: 44px; padding: 0 16px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">Хочу узнать первым</button></sc-if>
+<sc-if value="{{noWish}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{makeWish}}" style="align-self: flex-start; height: 44px; padding: 0 16px; border: 2px solid #EAE3D5; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Хочу узнать первым</button></sc-if>
 <sc-if value="{{hasWish}}" hint-placeholder-val="{{false}}"><div role="status" style="font-size: 16px; font-weight: 700; color: #157A41">Записали. Сообщим, когда появится.</div></sc-if>
 </div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<sc-if value="{{goalChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{go2}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
-<sc-if value="{{goalOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
+<sc-if value="{{goalChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{go2}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{goalOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
 </div>
 </div>
 </sc-if>
@@ -80,14 +99,14 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">Сколько времени в день?</h2>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <sc-for list="{{minsOptions}}" as="o" hint-placeholder-count="3">
-<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 19px; font-weight: 800">{{o.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563; text-align: right">{{o.sub}}</span></button>
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: 0 3px 0 {{o.border}}"><span style="font-size: 19px; font-weight: 800">{{o.title}}</span><span style="font-size: 16px; font-weight: 600; color: #4B5563; text-align: right">{{o.sub}}</span></button>
 </sc-for>
 </div>
 <div style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; font-size: 16px; line-height: 1.45">Напоминаем не чаще раза в день. Пропустил день — серию можно заморозить, а в выходные она не сгорает.</div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<sc-if value="{{minsChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{afterMins}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Дальше</button></sc-if>
-<sc-if value="{{minsOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
+<sc-if value="{{minsChosen}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{afterMins}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{minsOpen}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери вариант</button></sc-if>
 </div>
 </div>
 </sc-if>
@@ -98,11 +117,11 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div aria-hidden="true" style="width: 64px; height: 64px; border-radius: 18px; background: #E8EEFD; color: #1D4ED8; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"></path><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"></path></svg></div>
 <h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">Проверим, что ты уже знаешь</h2>
 <p style="margin: 0; font-size: 18px; line-height: 1.5">5 вопросов, около 2 минут. Если раздел тебе знаком, начнёшь сразу со следующего — без долгих уроков о том, что и так понятно.</p>
-<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; line-height: 1.45">Не уверен — жми «Не знаю». Так тест точнее, а угаданный ответ только отправит тебя мимо нужных уроков.</div>
+<div style="padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 16px; line-height: 1.45">Не уверен — жми «Не знаю». Так тест точнее, а угаданный ответ только отправит тебя мимо нужных уроков.</div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
-<button type="button" onClick="{{startTest}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Пройти тест</button>
-<button type="button" onClick="{{skipTest}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Пропустить, начну с первого урока</button>
+<button type="button" onClick="{{startTest}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Пройти тест</button>
+<button type="button" onClick="{{skipTest}}" style="width: 100%; height: 48px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Пропустить, начну с первого урока</button>
 </div>
 </div>
 </sc-if>
@@ -114,13 +133,13 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <h2 style="margin: 0; font-size: 23px; line-height: 1.3; font-weight: 800">{{test.text}}</h2>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <sc-for list="{{test.options}}" as="o" hint-placeholder-count="4">
-<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 54px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer">{{o.text}}</button>
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 54px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; box-shadow: 0 3px 0 {{o.border}}">{{o.text}}</button>
 </sc-for>
 </div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<sc-if value="{{test.answered}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{test.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">{{test.nextLabel}}</button></sc-if>
-<sc-if value="{{test.open}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери ответ</button></sc-if>
+<sc-if value="{{test.answered}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{test.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">{{test.nextLabel}}</button></sc-if>
+<sc-if value="{{test.open}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Выбери ответ</button></sc-if>
 </div>
 </div>
 </sc-if>
@@ -130,7 +149,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
 <h2 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">{{result.title}}</h2>
 <p style="margin: 0; font-size: 18px; line-height: 1.5">{{result.text}}</p>
-<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 6px 16px; display: flex; flex-direction: column">
+<div style="background: #FFFFFF; border: 1px solid #EAE3D5; border-radius: 16px; padding: 6px 16px; display: flex; flex-direction: column">
 <sc-for list="{{result.rows}}" as="r" hint-placeholder-count="3">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid {{r.line}}"><span style="font-size: 17px; font-weight: 700">{{r.title}}</span><span style="flex: none; padding: 4px 10px; border-radius: 999px; background: {{r.bg}}; color: {{r.ink}}; font-size: 15px; font-weight: 800">{{r.verdict}}</span></div>
 </sc-for>
@@ -138,17 +157,17 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="padding: 14px 16px; border-radius: 14px; background: #E8EEFD; font-size: 16px; line-height: 1.45">Пропущенные разделы не исчезают: пара вопросов из них будет приходить в повторениях. Закрыть раздел полностью можно, сдав его босса.</div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">К карте трека</button>
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">К карте трека</button>
 </div>
 </div>
 </sc-if>
 
 <sc-if value="{{isMap}}" hint-placeholder-val="{{false}}">
 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
-<div style="flex: none; padding: 12px 20px 8px; display: flex; flex-direction: column; gap: 10px; background: #F4F6F8; border-bottom: 1px solid #DDE3EA">
+<div style="flex: none; padding: 12px 20px 8px; display: flex; flex-direction: column; gap: 10px; background: #FBF7F0; border-bottom: 1px solid #EAE3D5">
 <div style="height: 44px; display: flex; align-items: center; justify-content: space-between">
 <span style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em">Инвестиции</span>
-<div role="img" aria-label="Серия: 0 дней" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-weight: 800; font-size: 17px; color: #4B5563"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>0</span></div>
+<div role="img" aria-label="Серия: 0 дней" style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAE3D5; font-weight: 800; font-size: 17px; color: #4B5563"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>0</span></div>
 </div>
 <div role="tablist" aria-label="Уровни трека" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 4px; border-radius: 12px; background: #E5E9EF">
 <button type="button" role="tab" aria-selected="true" style="height: 40px; border: 0; border-radius: 9px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 16px; font-weight: 800">Основа</button>
@@ -158,9 +177,9 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 </div>
 <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 14px 20px 28px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">Цель: {{map.goal}}</span>
-<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">{{map.mins}} в день</span>
-<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 15px; font-weight: 700">Неделя: 0 из 30 мин</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 15px; font-weight: 700">Цель: {{map.goal}}</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 15px; font-weight: 700">{{map.mins}} в день</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 15px; font-weight: 700">Неделя: 0 из 30 мин</span>
 </div>
 <sc-for list="{{map.sections}}" as="s" hint-placeholder-count="3">
 <div style="background: #FFFFFF; border: 2px solid {{s.border}}; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
@@ -174,11 +193,11 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="display: flex; align-items: center; gap: 12px">
 <span aria-hidden="true" style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: {{l.circleBg}}; color: {{l.circleInk}}; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800">{{l.mark}}</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 700; line-height: 1.3; color: {{l.ink}}">{{l.title}}</span><sc-if value="{{l.hasNote}}" hint-placeholder-val="{{false}}"><span style="font-size: 14px; font-weight: 700; color: #4B5563">{{l.note}}</span></sc-if></span>
-<sc-if value="{{l.smallLink}}" hint-placeholder-val="{{false}}"><a href="{{l.href}}" style="flex: none; display: flex; align-items: center; height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 2px solid #157A41; color: #157A41; font-size: 16px; font-weight: 800; text-decoration: none">Открыть</a></sc-if>
-<sc-if value="{{l.smallPeek}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{l.peek}}" aria-expanded="{{l.peekOpen}}" style="flex: none; height: 44px; padding: 0 14px; border-radius: 10px; border: 2px solid #DDE3EA; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 16px; font-weight: 800; cursor: pointer">Открыть</button></sc-if>
+<sc-if value="{{l.smallLink}}" hint-placeholder-val="{{false}}"><a class="fz-btn" href="{{l.href}}" style="flex: none; display: flex; align-items: center; height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 2px solid #157A41; color: #157A41; font-size: 16px; font-weight: 800; text-decoration: none; box-shadow: 0 3px 0 #157A41">Открыть</a></sc-if>
+<sc-if value="{{l.smallPeek}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{l.peek}}" aria-expanded="{{l.peekOpen}}" style="flex: none; height: 44px; padding: 0 14px; border-radius: 10px; border: 2px solid #EAE3D5; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 16px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Открыть</button></sc-if>
 </div>
-<sc-if value="{{l.isLinked}}" hint-placeholder-val="{{false}}"><a href="{{l.href}}" style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 12px; background: #157A41; color: #FFFFFF; font-size: 18px; font-weight: 800; text-decoration: none">Начать урок · 5 мин</a></sc-if>
-<sc-if value="{{l.showMissing}}" hint-placeholder-val="{{false}}"><div role="status" style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4; color: #4B5563"><span>Этот урок ещё не собран — в прототипе пока готов только раздел 1.</span><a href="compound.html" style="font-weight: 800">Открыть урок «Сложный процент»</a></div></sc-if>
+<sc-if value="{{l.isLinked}}" hint-placeholder-val="{{false}}"><a href="{{l.href}}" style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 14px; background: #157A41; color: #FFFFFF; font-size: 18px; font-weight: 800; text-decoration: none">Начать урок · 5 мин</a></sc-if>
+<sc-if value="{{l.showMissing}}" hint-placeholder-val="{{false}}"><div role="status" style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4; color: #4B5563"><span>Этот урок ещё не собран — в прототипе пока готовы разделы 1 и 2.</span><a href="compound.html" style="font-weight: 800">Открыть урок «Сложный процент»</a></div></sc-if>
 </div>
 </sc-for>
 </div>
@@ -187,7 +206,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <span aria-hidden="true" style="flex: none; width: 30px; height: 30px; border-radius: 8px; background: #FDEDE4; color: #B4410C; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.5-.8z"></path></svg></span>
 <div style="flex: 1; min-width: 0"><div style="font-size: 14px; font-weight: 800; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Босс раздела · {{s.bossSize}}</div><div style="font-size: 17px; font-weight: 700; line-height: 1.3">{{s.boss}}</div></div>
 </div>
-<sc-if value="{{s.bossOpenable}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{s.startBoss}}" style="height: 44px; border: 2px solid #B4410C; border-radius: 12px; background: #FFFFFF; color: #B4410C; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">{{s.bossLabel}}</button></sc-if>
+<sc-if value="{{s.bossOpenable}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{s.startBoss}}" style="height: 44px; border: 2px solid #B4410C; border-radius: 14px; background: #FFFFFF; color: #B4410C; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #B4410C">{{s.bossLabel}}</button></sc-if>
 <sc-if value="{{s.bossPassed}}" hint-placeholder-val="{{false}}"><div role="status" style="padding: 10px 12px; border-radius: 10px; background: #E7F5EC; color: #157A41; font-size: 16px; font-weight: 800">Сдан экстерном: {{s.bossScore}}</div></sc-if>
 </div>
 </div>
@@ -207,13 +226,13 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="font-size: 15px; font-weight: 700; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Босс раздела {{boss.secNum}} · экстерн</div>
 <h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800">{{boss.title}}</h1>
 <p style="margin: 0; font-size: 18px; line-height: 1.5">Это не тест, а работа: {{boss.count}} задачи на одной ситуации. Ответы проверяются в конце, за частично верный ответ — часть баллов. Чтобы закрыть раздел, нужно {{boss.passLabel}}.</p>
-<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 16px; padding: 16px">
+<div style="background: #FFFFFF; border: 1px solid #EAE3D5; border-radius: 16px; padding: 16px">
 <div style="font-size: 15px; font-weight: 800; color: #4B5563; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px">Ситуация</div>
 <p style="margin: 0; font-size: 17px; line-height: 1.5">{{boss.brief}}</p>
 </div>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<button type="button" onClick="{{boss.begin}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Начать</button>
+<button type="button" onClick="{{boss.begin}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #7A2C08">Начать</button>
 </div>
 </div>
 </sc-if>
@@ -222,17 +241,17 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
 <div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
 <button type="button" onClick="{{boss.prev}}" aria-label="Назад" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
-<div role="progressbar" aria-label="Задачи босса" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{boss.pctNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #DDE3EA; overflow: hidden"><div style="height: 100%; width: {{boss.pct}}; background: #B4410C; border-radius: 6px; transition: width .35s ease"></div></div>
+<div role="progressbar" aria-label="Задачи босса" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{boss.pctNum}}" style="flex: 1; height: 12px; border-radius: 6px; background: #EAE3D5; overflow: hidden"><div style="height: 100%; width: {{boss.pct}}; background: #B4410C; border-radius: 6px; transition: width .35s ease"></div></div>
 <span style="flex: none; font-size: 16px; font-weight: 800; color: #4B5563">{{boss.counter}}</span>
 </div>
 <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
-<div style="padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #DDE3EA; font-size: 16px; line-height: 1.45; color: #374151">{{boss.brief}}</div>
+<div style="padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #EAE3D5; font-size: 16px; line-height: 1.45; color: #374151">{{boss.brief}}</div>
 <div style="font-size: 15px; font-weight: 700; color: #B4410C; text-transform: uppercase; letter-spacing: .04em">Задача {{boss.taskNum}} · {{boss.taskTitle}}</div>
 <h2 style="margin: 0; font-size: 22px; line-height: 1.3; font-weight: 800">{{boss.taskText}}</h2>
 <sc-if value="{{boss.isChoiceLike}}" hint-placeholder-val="{{true}}">
 <div style="display: flex; flex-direction: column; gap: 10px">
 <sc-for list="{{boss.options}}" as="o" hint-placeholder-count="4">
-<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 14px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 24px; height: 24px; box-sizing: border-box; border-radius: {{o.markRadius}}; border: 2px solid {{o.markBorder}}; background: {{o.markBg}}; display: flex; align-items: center; justify-content: center; color: #FFFFFF"><sc-if value="{{o.marked}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></sc-if></span><span style="font-size: 18px; font-weight: 600; line-height: 1.35">{{o.text}}</span></button>
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; box-shadow: 0 3px 0 {{o.border}}"><span aria-hidden="true" style="flex: none; width: 24px; height: 24px; box-sizing: border-box; border-radius: {{o.markRadius}}; border: 2px solid {{o.markBorder}}; background: {{o.markBg}}; display: flex; align-items: center; justify-content: center; color: #FFFFFF"><sc-if value="{{o.marked}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></sc-if></span><span style="font-size: 18px; font-weight: 600; line-height: 1.35">{{o.text}}</span></button>
 </sc-for>
 </div>
 </sc-if>
@@ -240,7 +259,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="boss-num" style="font-size: 16px; font-weight: 700; color: #4B5563">Ответ в рублях</label>
 <div style="display: flex; align-items: center; gap: 10px">
-<input id="boss-num" type="number" inputMode="numeric" value="{{boss.numValue}}" onChange="{{boss.setNum}}" style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; padding: 0 14px; border: 2px solid #DDE3EA; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 24px; font-weight: 800; color: #14213D">
+<input id="boss-num" type="number" inputMode="numeric" value="{{boss.numValue}}" onChange="{{boss.setNum}}" style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; padding: 0 14px; border: 2px solid #EAE3D5; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 24px; font-weight: 800; color: #14213D">
 <span style="flex: none; font-size: 24px; font-weight: 800">₽</span>
 </div>
 <span style="font-size: 15px; color: #4B5563">Можно считать на калькуляторе — это работа, а не экзамен по памяти.</span>
@@ -248,8 +267,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 </sc-if>
 </div>
 <div style="flex: none; padding: 12px 20px 28px">
-<sc-if value="{{boss.ready}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">{{boss.nextLabel}}</button></sc-if>
-<sc-if value="{{boss.notReady}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #E5E7EB; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Ответь на задачу</button></sc-if>
+<sc-if value="{{boss.ready}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.next}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #B4410C; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #7A2C08">{{boss.nextLabel}}</button></sc-if>
+<sc-if value="{{boss.notReady}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 19px; font-weight: 700">Ответь на задачу</button></sc-if>
 </div>
 </div>
 </sc-if>
@@ -258,14 +277,14 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
 <div style="flex: 1; min-height: 0; overflow-y: auto; padding: 48px 20px 20px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: center; gap: 14px">
-<div aria-hidden="true" style="flex: none; width: 64px; height: 64px; border-radius: 50%; background: {{br.iconBg}}; color: {{br.iconInk}}; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.8-5 2.8 1-5.7-4-4 5.5-.8z"></path></svg></div>
+<sc-if value="{{br.passed}}" hint-placeholder-val="{{true}}"><div aria-hidden="true" style="flex: none; display: flex"><svg width="92" height="64" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q128 138 136 100" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/><path d="M26 66 Q27.5 70.5 32 72 Q27.5 73.5 26 78 Q24.5 73.5 20 72 Q24.5 70.5 26 66 Z" fill="#F2B705"/><path d="M70 59.5 Q71.125 62.875 74.5 64 Q71.125 65.125 70 68.5 Q68.875 65.125 65.5 64 Q68.875 62.875 70 59.5 Z" fill="#F2B705"/><path d="M120 73 Q121.25 76.75 125 78 Q121.25 79.25 120 83 Q118.75 79.25 115 78 Q118.75 76.75 120 73 Z" fill="#F2B705"/></svg></div></sc-if><sc-if value="{{br.failed}}" hint-placeholder-val="{{false}}"><div aria-hidden="true" style="flex: none; display: flex"><svg width="92" height="64" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/><circle cx="124" cy="90" r="2.6" fill="#9AA5B1"/><circle cx="129" cy="80" r="3.6" fill="#9AA5B1"/><circle cx="133" cy="67" r="5" fill="#9AA5B1"/></svg></div></sc-if>
 <div>
 <h1 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 800">{{br.title}}</h1>
 <p style="margin: 4px 0 0; font-size: 17px; color: #374151">{{br.sub}}</p>
 </div>
 </div>
 <sc-for list="{{br.rows}}" as="r" hint-placeholder-count="3">
-<div style="background: #FFFFFF; border: 1px solid #DDE3EA; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<div style="background: #FFFFFF; border: 1px solid #EAE3D5; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><span style="font-size: 17px; font-weight: 800">{{r.title}}</span><span style="flex: none; padding: 4px 10px; border-radius: 999px; background: {{r.bg}}; color: {{r.ink}}; font-size: 15px; font-weight: 800">{{r.pts}}</span></div>
 <p style="margin: 0; font-size: 16px; line-height: 1.45; color: #374151">{{r.why}}</p>
 </div>
@@ -278,8 +297,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 </sc-if>
 </div>
 <div style="flex: none; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 8px">
-<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 14px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">К карте трека</button>
-<sc-if value="{{br.failed}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.retry}}" style="width: 100%; height: 48px; border: 2px solid #DDE3EA; border-radius: 14px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer">Попробовать ещё раз</button></sc-if>
+<button type="button" onClick="{{toMap}}" style="width: 100%; height: 54px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">К карте трека</button>
+<sc-if value="{{br.failed}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{boss.retry}}" style="width: 100%; height: 48px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Попробовать ещё раз</button></sc-if>
 </div>
 </div>
 </sc-if>
@@ -290,18 +309,54 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 class Component extends DCLogic {
   initial() {
     return { screen: 0, goal: null, mins: null, wish: false, q: 0, ans: [null, null, null, null, null], tested: false,
-      extern: [null, null, null], bossSec: 0, bt: 0, bAns: [], peek: '' };
+      extern: [null, null, null], bossSec: 0, bt: 0, bAns: [], peek: '', warm: null };
   }
 
   st() {
     return Object.assign(this.initial(), this.state || {});
   }
 
-  renderVals() {
+  renderVals() { return this.__mark(this.__rv()); }
+
+  __mark(v) {
+    var seen = [];
+    function walk(o, d) {
+      if (!o || typeof o !== 'object' || d > 3 || seen.indexOf(o) >= 0) return;
+      seen.push(o);
+      if (Array.isArray(o)) { o.forEach(function (x) { walk(x, d + 1); }); return; }
+      var bg = typeof o.bg === 'string' ? o.bg : o.fbBg;
+      if (typeof bg === 'string' && o.tGood === undefined) {
+        o.tGood = bg === '#E7F5EC'; o.tBad = bg === '#FDEDE4'; o.tCalm = !o.tGood && !o.tBad;
+      }
+      Object.keys(o).forEach(function (k) { var x = o[k]; if (x && typeof x === 'object' && typeof x !== 'function') walk(x, d + 1); });
+    }
+    walk(v, 0);
+    return v;
+  }
+
+  __rv() {
     var self = this;
     var st = this.st();
     var GREEN = '#157A41', GREEN_BG = '#E7F5EC', ORANGE = '#B4410C', ORANGE_BG = '#FDEDE4';
-    var LINE = '#DDE3EA', INK = '#14213D', MUTED = '#4B5563', BLUE = '#1D4ED8', BLUE_BG = '#E8EEFD';
+    var LINE = '#EAE3D5', INK = '#14213D', MUTED = '#4B5563', BLUE = '#1D4ED8', BLUE_BG = '#E8EEFD';
+
+    var WARM = [{ id: 'a', text: 'На 10%' }, { id: 'b', text: 'Примерно на 2%', ok: true }, { id: 'c', text: 'На 18%' }];
+    var warmOk = st.warm === 'b';
+    var warm = {
+      answered: st.warm !== null && st.warm !== undefined,
+      options: WARM.map(function (o) {
+        var picked = st.warm === o.id, answered = st.warm !== null && st.warm !== undefined;
+        var border = LINE, bg = '#FFFFFF';
+        if (answered && o.ok) { border = GREEN; bg = GREEN_BG; }
+        else if (picked) { border = ORANGE; bg = ORANGE_BG; }
+        return { text: o.text, pressed: picked, border: border, bg: bg, pick: function () { self.setState({ warm: o.id }); } };
+      }),
+      title: warmOk ? 'Верно!' : 'Это частая ловушка',
+      text: warmOk
+        ? 'Рост цен «съедает» часть процента. Это называется реальной доходностью — подробно разберём в уроке 2.'
+        : 'Цены выросли на 8%, поэтому по-настоящему ты богаче только примерно на 2%. Подробно разберём в уроке 2.',
+      bg: warmOk ? GREEN_BG : ORANGE_BG, ink: warmOk ? GREEN : ORANGE
+    };
 
     /* Цели */
     var GOALS = [
@@ -519,7 +574,7 @@ class Component extends DCLogic {
       return {
         num: si + 1, title: sec.title, boss: sec.boss, bossSize: BOSSES[si].tasks.length + ' задачи на одной ситуации',
         border: isCur ? GREEN : LINE,
-        tag: tag, tagBg: isDone ? GREEN_BG : (isCur ? GREEN : '#F4F6F8'), tagInk: isDone ? GREEN : (isCur ? '#FFFFFF' : MUTED),
+        tag: tag, tagBg: isDone ? GREEN_BG : (isCur ? GREEN : '#FBF7F0'), tagInk: isDone ? GREEN : (isCur ? '#FFFFFF' : MUTED),
         bossOpenable: !isExtern, bossPassed: isExtern,
         bossLabel: isKnown ? 'Закрыть раздел полностью' : 'Сдать раздел экстерном',
         bossScore: isExtern ? st.extern[si] + ' из ' + bossMax(BOSSES[si]) + ' баллов' : '',
@@ -527,9 +582,9 @@ class Component extends DCLogic {
         lessons: sec.lessons.map(function (t, li) {
           var key = si + '-' + li;
           var current = isCur && li === 0;
-          var built = si === 0;
-          var href = ['compound.html', 'inflation.html', 'risk.html', 'pyramid.html'][li];
-          var mark = String(li + 1), circleBg = '#F4F6F8', circleInk = MUTED, ink = INK, note = '', rowBg = 'transparent';
+          var built = si <= 1;
+          var href = [['compound.html', 'inflation.html', 'risk.html', 'pyramid.html'], ['stocks.html', 'bonds.html', 'funds.html', 'broker.html'], []][si][li] || '';
+          var mark = String(li + 1), circleBg = '#FBF7F0', circleInk = MUTED, ink = INK, note = '', rowBg = 'transparent';
           if (isDone) { mark = '✓'; circleBg = GREEN_BG; circleInk = GREEN; note = isExtern ? 'закрыт экстерном' : 'в повторениях'; ink = MUTED; }
           else if (current) { circleBg = GREEN; circleInk = '#FFFFFF'; rowBg = GREEN_BG; }
           return {
@@ -554,6 +609,7 @@ class Component extends DCLogic {
     var sp = setupScreens[st.screen] || 0;
 
     return {
+      warm: warm,
       isWelcome: st.screen === 0, isGoal: st.screen === 1, isMins: st.screen === 2, isOffer: st.screen === 3,
       isTest: st.screen === 4, isResult: st.screen === 5, isMap: st.screen === 6,
       isBossIntro: st.screen === 7, isBossTask: st.screen === 8, isBossResult: st.screen === 9,

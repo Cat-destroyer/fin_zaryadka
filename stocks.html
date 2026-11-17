@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23E7F5EC%22/%3E%3Cg%20transform%3D%22translate%282.2%20-19.9%29%20scale%280.46%29%22%3E%3Cpath%20d%3D%22M14%20136%20L4%20142%20L16%20143%20Z%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cellipse%20cx%3D%2278%22%20cy%3D%22148%22%20rx%3D%2210%22%20ry%3D%228%22%20fill%3D%22%237FBF5E%22/%3E%3Cpath%20d%3D%22M12%20140%20Q12%2078%2054%2078%20Q96%2078%2096%20140%20Z%22%20fill%3D%22%23157A41%22/%3E%3Cpath%20d%3D%22M42%2096%20L66%2096%20L74%20116%20L62%20132%20L46%20132%20L34%20116%20Z%22%20fill%3D%22none%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M42%2096%20L36%2084%20M66%2096%20L72%2084%20M34%20116%20L16%20116%20M74%20116%20L92%20116%20M46%20132%20L42%20140%20M62%20132%20L66%20140%22%20stroke%3D%22%233FAE6A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Crect%20x%3D%228%22%20y%3D%22136%22%20width%3D%2292%22%20height%3D%229%22%20rx%3D%224.5%22%20fill%3D%22%230E5A2F%22/%3E%3Ccircle%20cx%3D%22106%22%20cy%3D%22112%22%20r%3D%2220%22%20fill%3D%22%238FCB6B%22/%3E%3Ccircle%20cx%3D%2299%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22113%22%20cy%3D%22114%22%20r%3D%226%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22114%22%20cy%3D%22115%22%20r%3D%223.2%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%22101%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%22113.6%22%20r%3D%221.1%22%20fill%3D%22%23FFFFFF%22/%3E%3Cpath%20d%3D%22M100%20124%20Q107%20129%20114%20124%22%20fill%3D%22none%22%20stroke%3D%22%2314213D%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3C/svg%3E">
+
+<title>Финзарядка — урок 5 «Акции: доля в бизнесе»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+button,a.fz-btn{transition:transform .06s ease, box-shadow .06s ease}
+button:not(:disabled):active,a.fz-btn:active{transform:translateY(3px);box-shadow:none !important}
+@keyframes fzpop{0%{transform:translateY(6px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes fzwob{0%,100%{transform:rotate(0)}30%{transform:rotate(-4deg)}60%{transform:rotate(3deg)}}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #FBF7F0; font-family: 'Nunito', system-ui, sans-serif; color: #14213D">
+
+<sc-if value="{{inLesson}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 68px; box-sizing: border-box; padding: 12px 16px; display: flex; align-items: center; gap: 12px">
+<button type="button" onClick="{{close}}" aria-label="Закрыть урок" style="flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #6B7280; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div role="progressbar" aria-label="Прогресс урока" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progressNum}}" style="flex: 1; height: 16px; border-radius: 8px; background: #EAE3D5; overflow: hidden"><div style="height: 100%; width: {{progress}}; background: #157A41; border-radius: 8px; transition: width .35s ease; box-shadow: inset 0 -4px 0 rgba(0,0,0,.12)"></div></div>
+<div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStart}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between"><span style="font-size: 22px; font-weight: 900; color: #157A41">Финзарядка</span><div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div></div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Инвестиции · Основа · Урок 5</div><div style="display: flex; align-items: flex-end; gap: 6px"><div aria-hidden="true" style="flex: none; display: flex"><svg width="132" height="92" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q122 142 134 120" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><path d="M141 112 Q146 118 143 126 M146 104 Q153 116 149 130" fill="none" stroke="#9AA5B1" stroke-width="2" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/></svg></div><div style="flex: 1; min-width: 0; margin-bottom: 40px; padding: 10px 12px; border-radius: 16px 16px 16px 4px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; line-height: 1.4; font-weight: 700">{{hello}}</div></div><h1 style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 900">Акции: что ты покупаешь на самом деле</h1><p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Акция — не бумажка и не лотерейный билет. Разберёмся на примере пекарни «Колосок».</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">6 минут</span><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">Новости: дороже или дешевле?</span><span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 16px; font-weight: 800">Навык: акции</span></div></div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+<button type="button" onClick="{{start}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Начать урок</button></div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isPredict}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 1 из 4 · Попробуй</div>
+<div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 12px; align-items: center">
+<div aria-hidden="true" style="flex: none; width: 52px; height: 52px; border-radius: 50%; background: #F6E3C4; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 40 40"><ellipse cx="20" cy="24" rx="16" ry="10" fill="#D9963F"></ellipse><ellipse cx="20" cy="21" rx="14" ry="8" fill="#E9B872"></ellipse><path d="M10 19 Q14 16 18 19 M18 18 Q22 15 26 18 M25 19 Q28 17 31 19" fill="none" stroke="#B9772B" stroke-width="2" stroke-linecap="round"></path></svg></div>
+<p style="margin: 0; font-size: 18px; line-height: 1.45">Пекарня «Колосок» стоит <b>10 млн ₽</b>. Её разделили на <b>10 000 акций</b> — по 1 000 ₽. Тимур купил 3 акции на 3 000 ₽.</p>
+</div>
+</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Что теперь есть у Тимура?</h2>
+<div style="display: flex; flex-direction: column; gap: 10px"><sc-for list="{{p1Opts}}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 56px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{o.border}}"><span>{{o.text}}</span><sc-if value="{{o.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size: 15px; font-weight: 800; color: {{o.badgeColor}}">{{o.badge}}</span></sc-if></button></sc-for></div>
+<sc-if value="{{p1Done}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{p1Fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{p1Fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{p1Fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{p1Fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{p1Fb.ink}}">{{p1Fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{p1Fb.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{p1Done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{p1Wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Выбери ответ</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isLoaf}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Разбери</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Сколько акций нужно, чтобы получать 1 500 ₽ в год?</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">За год «Колосок» заработал 1,5 млн ₽ и половину раздал владельцам — по 75 ₽ на каждую акцию. Покупай акции и смотри, как растёт твой кусочек.</p>
+<div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div aria-hidden="true" style="flex: none; position: relative; width: 96px; height: 96px">
+<svg width="96" height="96" viewBox="0 0 96 96"><ellipse cx="48" cy="56" rx="44" ry="32" fill="#C98535"></ellipse><ellipse cx="48" cy="50" rx="41" ry="28" fill="#E9B872"></ellipse><path d="M22 44 Q30 36 38 44 M40 40 Q48 32 56 40 M58 44 Q66 36 74 44" fill="none" stroke="#B9772B" stroke-width="3" stroke-linecap="round"></path></svg>
+<div style="position: absolute; right: -4px; bottom: 6px; width: {{lv.crumb}}; height: {{lv.crumb}}; border-radius: 50%; background: #157A41; border: 2px solid #FFFFFF; transition: all .2s ease"></div>
+</div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 800; color: #6B7280">Если пекарня — каравай весом 1 кг, твой кусочек весит</div>
+<div style="font-size: 28px; font-weight: 900; color: #157A41">{{lv.grams}}</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<div style="padding: 10px 12px; border-radius: 14px; background: #FBF7F0"><div style="font-size: 14px; font-weight: 800; color: #6B7280">Акций</div><div style="font-size: 22px; font-weight: 900">{{lv.shares}}</div></div>
+<div style="padding: 10px 12px; border-radius: 14px; background: #FBF7F0"><div style="font-size: 14px; font-weight: 800; color: #6B7280">Потрачено</div><div style="font-size: 22px; font-weight: 900">{{lv.cost}}</div></div>
+<div style="padding: 10px 12px; border-radius: 14px; background: #FBF7F0"><div style="font-size: 14px; font-weight: 800; color: #6B7280">Доля пекарни</div><div style="font-size: 22px; font-weight: 900">{{lv.pct}}</div></div>
+<div style="padding: 10px 12px; border-radius: 14px; background: {{lv.divBg}}"><div style="font-size: 14px; font-weight: 800; color: #6B7280">Дивиденды в год</div><div style="font-size: 22px; font-weight: 900; color: {{lv.divInk}}">{{lv.div}}</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{lv.btns}}" as="b" hint-placeholder-count="4">
+<button type="button" onClick="{{b.tap}}" aria-label="{{b.aria}}" style="min-height: 52px; border-radius: 14px; border: 2px solid {{b.border}}; background: {{b.bg}}; color: {{b.ink}}; font-family: inherit; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 3px 0 {{b.border}}">{{b.label}}</button>
+</sc-for>
+</div>
+</div>
+<sc-if value="{{lv.showFb}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{lv.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{lv.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{lv.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{lv.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{lv.fb.ink}}">{{lv.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{lv.fb.text}}</p></div></div></sc-if>
+<sc-if value="{{lv.showHint}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></div><div style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 17px; line-height: 1.45"><b>Объясни проще.</b> Каждая акция приносит 75 ₽ в год. Раздели 1 500 на 75 — получишь, сколько акций нужно.</div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{lv.done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{lv.wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Набери ровно 1 500 ₽ в год</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isWays}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Разбери</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Откуда берётся доход от акции</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Открой все три карточки.</p>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{ways}}" as="w" hint-placeholder-count="3">
+<button type="button" onClick="{{w.open}}" aria-expanded="{{w.isOpen}}" style="width: 100%; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 18px; border: 2px solid {{w.border}}; background: {{w.bg}}; color: #14213D; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{w.border}}">
+<span style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="font-size: 19px; font-weight: 900">{{w.title}}</span><span aria-hidden="true" style="font-size: 15px; font-weight: 800; color: #6B7280">{{w.hintLabel}}</span></span>
+<sc-if value="{{w.isOpen}}" hint-placeholder-val="{{false}}"><span style="font-size: 17px; line-height: 1.45; font-weight: 600">{{w.text}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{waysAll}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M100 124 Q107 129 114 124" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></div><div style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 17px; line-height: 1.45">Цена акции — это сколько за неё готовы заплатить сегодня. А платят за будущее: за прибыль, которую бизнес, как все думают, заработает. Проверим на новостях!</div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{waysAll}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">К новостям</button></sc-if>
+<sc-if value="{{waysWait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Открой все карточки</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isSwipe}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 2 из 4 · Новости «Колоска»</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px"><span style="font-size: 18px; font-weight: 900">Новость {{sw.num}} из 6</span><span style="font-size: 17px; font-weight: 800; color: #157A41">Угадано: {{sw.right}}</span></div>
+<div style="position: relative; background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 6px 0 #EAE3D5; transform: rotate({{sw.tilt}}); transition: transform .25s ease">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 900; color: #6B7280; text-transform: uppercase; letter-spacing: .05em"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5z"></path><path d="M17 9h3v8a2 2 0 0 1-2 2"></path><path d="M7 9h7M7 13h7"></path></svg>Новости «Колоска»</div>
+<p style="margin: 0; font-size: 21px; line-height: 1.35; font-weight: 800">{{sw.text}}</p>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-top: 10px; border-top: 2px dashed #EAE3D5">
+<span style="font-size: 16px; font-weight: 800; color: #6B7280">Цена акции</span>
+<span style="font-size: 20px; font-weight: 900; color: {{sw.priceInk}}">{{sw.price}}</span>
+</div>
+</div>
+<sc-if value="{{sw.asking}}" hint-placeholder-val="{{true}}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" onClick="{{sw.down}}" style="min-height: 64px; border-radius: 18px; border: 2px solid #B4410C; background: #FDEDE4; color: #B4410C; font-family: inherit; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #B4410C">↓ Дешевле</button>
+<button type="button" onClick="{{sw.up}}" style="min-height: 64px; border-radius: 18px; border: 2px solid #157A41; background: #E7F5EC; color: #157A41; font-family: inherit; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #157A41">↑ Дороже</button>
+</div>
+</sc-if>
+<sc-if value="{{sw.answered}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{sw.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{sw.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{sw.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{sw.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{sw.fb.ink}}">{{sw.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{sw.fb.text}}</p></div></div></sc-if>
+<sc-if value="{{sw.finished}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{sw.sum.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{sw.sum.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{sw.sum.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{sw.sum.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{sw.sum.ink}}">{{sw.sum.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{sw.sum.text}}</p></div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{sw.canNext}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{sw.nextCard}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Следующая новость</button></sc-if>
+<sc-if value="{{sw.finished}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{sw.asking}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Выбери: дороже или дешевле</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isPairs}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 3 из 4 · Вспомни</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Соедини слово и его смысл</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Нажми на слово, потом — на подходящее объяснение.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{pairs.terms}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.tap}}" aria-pressed="{{t.sel}}" style="min-height: 52px; border-radius: 14px; border: 2px solid {{t.border}}; background: {{t.bg}}; color: {{t.ink}}; font-family: inherit; font-size: 18px; font-weight: 900; cursor: pointer; box-shadow: 0 3px 0 {{t.border}}">{{t.text}}</button>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{pairs.defs}}" as="d" hint-placeholder-count="4">
+<button type="button" onClick="{{d.tap}}" style="width: 100%; box-sizing: border-box; min-height: 52px; text-align: left; padding: 12px 14px; border-radius: 14px; border: 2px solid {{d.border}}; background: {{d.bg}}; color: {{d.ink}}; font-family: inherit; font-size: 17px; font-weight: 700; line-height: 1.35; cursor: pointer; box-shadow: 0 3px 0 {{d.border}}; animation: {{d.anim}}">{{d.text}}</button>
+</sc-for>
+</div>
+<sc-if value="{{pairs.showFb}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{pairs.fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{pairs.fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{pairs.fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{pairs.fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{pairs.fb.ink}}">{{pairs.fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{pairs.fb.text}}</p></div></div></sc-if>
+<sc-if value="{{pairs.showHint}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></div><div style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 17px; line-height: 1.45"><b>Объясни проще.</b> Акционер — человек. Акция — его доля. Дивиденд — деньги из прибыли. Гэп — падение цены сразу после того, как закрылся список на выплату.</div></div></sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{pairs.done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Дальше</button></sc-if>
+<sc-if value="{{pairs.wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Соедини все пары</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isApply}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="font-size: 15px; font-weight: 800; color: #6B7280; text-transform: uppercase; letter-spacing: .04em">Шаг 4 из 4 · Примени к себе</div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Кому ты носишь деньги каждую неделю?</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #374151">Отметь всё, чем пользуешься.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{mineChips}}" as="c" hint-placeholder-count="6">
+<button type="button" onClick="{{c.toggle}}" aria-pressed="{{c.on}}" style="min-height: 48px; padding: 0 16px; border-radius: 999px; border: 2px solid {{c.border}}; background: {{c.bg}}; color: #14213D; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 {{c.border}}">{{c.text}}</button>
+</sc-for>
+</div>
+<sc-if value="{{mineAny}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M100 124 Q107 129 114 124" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></div><div style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: #FFFFFF; border: 2px solid #EAE3D5; font-size: 17px; line-height: 1.45">Многие такие компании есть на бирже, и ты можешь стать их совладельцем. А теперь вопрос на засыпку.</div></div>
+<h2 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 900">Компанию все любят, её магазины на каждом углу. Значит, её акция точно вырастет?</h2>
+<div style="display: flex; flex-direction: column; gap: 10px"><sc-for list="{{p6Opts}}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="width: 100%; min-height: 56px; box-sizing: border-box; text-align: left; padding: 14px 16px; border-radius: 16px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: {{o.ink}}; font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1.35; cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 3px 0 {{o.border}}"><span>{{o.text}}</span><sc-if value="{{o.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size: 15px; font-weight: 800; color: {{o.badgeColor}}">{{o.badge}}</span></sc-if></button></sc-for></div>
+<sc-if value="{{p6Done}}" hint-placeholder-val="{{false}}"><div style="display: flex; gap: 10px; align-items: flex-start; animation: fzpop .25s ease"><div aria-hidden="true" style="flex: none; width: 52px; height: 52px"><sc-if value="{{p6Fb.tGood}}" hint-placeholder-val="{{true}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if><sc-if value="{{p6Fb.tBad}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="100" cy="115" r="3.2" fill="#14213D"/><circle cx="114" cy="115" r="3.2" fill="#14213D"/><circle cx="101" cy="113.6" r="1.1" fill="#FFFFFF"/><circle cx="115" cy="113.6" r="1.1" fill="#FFFFFF"/><path d="M93 106 L100 103.5 M119 106 L112 103.5" stroke="#14213D" stroke-width="2.2" stroke-linecap="round"/><path d="M100 125 Q103.5 122 107 125 Q110.5 128 114 125" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/><path d="M127 94 Q131 100 127 103 Q123 100 127 94 Z" fill="#7CC4F0"/></g></svg></sc-if><sc-if value="{{p6Fb.tCalm}}" hint-placeholder-val="{{false}}"><svg width="52" height="52" viewBox="79 86 54 54" aria-hidden="true"><clipPath id="tc"><circle cx="106" cy="113" r="27"/></clipPath><g clip-path="url(#tc)"><circle cx="106" cy="113" r="27" fill="#EAF5E4"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><circle cx="99" cy="114" r="6" fill="#FFFFFF"/><circle cx="113" cy="114" r="6" fill="#FFFFFF"/><circle cx="101" cy="112" r="3.2" fill="#14213D"/><circle cx="115" cy="112" r="3.2" fill="#14213D"/><circle cx="102" cy="110.6" r="1.1" fill="#FFFFFF"/><circle cx="116" cy="110.6" r="1.1" fill="#FFFFFF"/><path d="M102 125.5 L112 123.5" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 133 Q104 143 85 132 Z" fill="#EA580C"/></g></svg></sc-if></div><div role="status" style="flex: 1; min-width: 0; padding: 12px 14px; border-radius: 4px 18px 18px 18px; background: {{p6Fb.bg}}"><div style="font-size: 18px; font-weight: 800; color: {{p6Fb.ink}}">{{p6Fb.title}}</div><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.45">{{p6Fb.text}}</p></div></div></sc-if>
+</sc-if>
+</div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+
+<sc-if value="{{p6Done}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{next}}" style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #0E5A2F">Завершить урок</button></sc-if>
+<sc-if value="{{p6Wait}}" hint-placeholder-val="{{true}}"><button type="button" disabled style="width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #EEE8DC; color: #4B5563; font-family: inherit; font-size: 18px; font-weight: 700">Ответь на вопрос</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column">
+<div style="flex: none; height: 68px; box-sizing: border-box; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between"><span style="font-size: 22px; font-weight: 900; color: #157A41">Финзарядка</span><div role="img" aria-label="Серия: {{streak}} дней" style="flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EAE3D5; font-weight: 900; font-size: 17px; color: #B4410C"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FDE7D9" stroke="#EA580C" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.6 3.2 4.5 5.2 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4.1 1.6.9 2.8 2 3.2C11 9 11.4 6 12 3z"></path></svg><span>{{streak}}</span></div></div>
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px"><div aria-hidden="true" style="flex: none; display: flex"><svg width="110" height="77" viewBox="-8 52 160 112" aria-hidden="true"><ellipse cx="62" cy="157" rx="50" ry="5" fill="#D9DEE5"/><path d="M14 136 L4 142 L16 143 Z" fill="#7FBF5E"/><ellipse cx="30" cy="148" rx="10" ry="8" fill="#7FBF5E"/><ellipse cx="78" cy="148" rx="10" ry="8" fill="#7FBF5E"/><path d="M12 140 Q12 78 54 78 Q96 78 96 140 Z" fill="#157A41"/><path d="M42 96 L66 96 L74 116 L62 132 L46 132 L34 116 Z" fill="none" stroke="#3FAE6A" stroke-width="3" stroke-linejoin="round"/><path d="M42 96 L36 84 M66 96 L72 84 M34 116 L16 116 M74 116 L92 116 M46 132 L42 140 M62 132 L66 140" stroke="#3FAE6A" stroke-width="3" stroke-linecap="round"/><rect x="8" y="136" width="92" height="9" rx="4.5" fill="#0E5A2F"/><path d="M98 140 Q128 138 136 100" fill="none" stroke="#7FBF5E" stroke-width="11" stroke-linecap="round"/><circle cx="106" cy="112" r="20" fill="#8FCB6B"/><path d="M94 116 Q99 109 104 116 M108 116 Q113 109 118 116" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round"/><path d="M99 123 Q107 133 115 123 Z" fill="#14213D"/><circle cx="94" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><circle cx="120" cy="122" r="3" fill="#F6A07A" opacity="0.7"/><path d="M86 127 Q104 138 124 128 L125 135 Q104 146 85 134 Z" fill="#EA580C"/><path d="M92 134 L86 149 L97 145 Z" fill="#C2410C"/><path d="M26 66 Q27.5 70.5 32 72 Q27.5 73.5 26 78 Q24.5 73.5 20 72 Q24.5 70.5 26 66 Z" fill="#F2B705"/><path d="M70 59.5 Q71.125 62.875 74.5 64 Q71.125 65.125 70 68.5 Q68.875 65.125 65.5 64 Q68.875 62.875 70 59.5 Z" fill="#F2B705"/><path d="M120 73 Q121.25 76.75 125 78 Q121.25 79.25 120 83 Q118.75 79.25 115 78 Q118.75 76.75 120 73 Z" fill="#F2B705"/></svg></div><div><h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 900">Урок пройден!</h1><p style="margin: 4px 0 0; font-size: 17px; line-height: 1.4; color: #374151">{{doneSub}}</p></div></div><div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px"><div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 16px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 900; color: #B4410C">{{streak}} дней</div><div style="font-size: 15px; color: #4B5563; font-weight: 700">серия</div></div><div style="background: #FFFFFF; border: 2px solid #EAE3D5; border-radius: 16px; padding: 12px; text-align: center"><div style="font-size: 22px; font-weight: 900">{{score}} из {{total}}</div><div style="font-size: 15px; color: #4B5563; font-weight: 700">верно с первой попытки</div></div></div><div style="background: #14213D; color: #FFFFFF; border-radius: 20px; padding: 18px"><div style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: #C7D2FE">Правило урока</div><p style="margin: 8px 0 0; font-size: 22px; line-height: 1.35; font-weight: 800">Акция — доля в бизнесе. Доход от неё — дивиденды и рост цены, но ни то, ни другое не гарантировано.</p></div><p style="margin: 0; font-size: 15px; line-height: 1.45; color: #4B5563">Пекарня «Колосок» и новости о ней вымышлены. Механика цены и дивидендов — как на настоящей бирже.</p></div>
+<div style="flex: none; padding: 10px 20px 26px; display: flex; flex-direction: column; gap: 10px">
+<a class="fz-btn" href="bonds.html" style="display: flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; box-sizing: border-box; padding: 0 16px; border: 0; border-radius: 16px; background: #157A41; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; box-shadow: 0 4px 0 #0E5A2F; text-decoration: none">Следующий урок: облигации</a><button type="button" onClick="{{restart}}" style="width: 100%; min-height: 50px; box-sizing: border-box; padding: 0 16px; border: 2px solid #EAE3D5; border-radius: 16px; background: #FFFFFF; color: #14213D; font-family: inherit; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 3px 0 #EAE3D5">Пройти урок заново</button></div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+
+class Component extends DCLogic {
+  initial() {
+    return { screen: 0, p1: null, shares: 0, over: 0, opened: [], sw: 0, swAns: [null, null, null, null, null, null],
+      pSel: null, pDone: [], pMiss: 0, pWrong: null, mine: [false, false, false, false, false, false], p6: null };
+  }
+
+  st() { return Object.assign(this.initial(), this.state || {}); }
+
+  C() {
+    return { GREEN: '#157A41', GREEN_BG: '#E7F5EC', ORANGE: '#B4410C', ORANGE_BG: '#FDEDE4', LINE: '#EAE3D5', INK: '#14213D',
+      MUTED: '#4B5563', BLUE: '#1D4ED8', BLUE_BG: '#E8EEFD', SUN: '#8A5A00', SUN_BG: '#FEF3C7' };
+  }
+
+  fb(ok, title, text) {
+    var c = this.C();
+    return { title: title, text: text, bg: ok ? c.GREEN_BG : c.ORANGE_BG, ink: ok ? c.GREEN : c.ORANGE, tGood: !!ok, tBad: !ok, tCalm: false };
+  }
+
+  note(title, text) {
+    var c = this.C();
+    return { title: title, text: text, bg: c.BLUE_BG, ink: c.BLUE, tGood: false, tBad: false, tCalm: true };
+  }
+
+  choice(key, opts) {
+    var self = this, c = this.C(), cur = this.st()[key];
+    var answered = cur !== null && cur !== undefined;
+    return opts.map(function (o) {
+      var mine = cur === o.id, border = c.LINE, bg = '#FFFFFF', ink = c.INK, badge = '', badgeColor = c.MUTED;
+      if (answered && o.ok) { border = c.GREEN; bg = c.GREEN_BG; badge = mine ? 'Твой ответ — верно' : 'Правильный ответ'; badgeColor = c.GREEN; }
+      else if (answered && mine) { border = c.ORANGE; bg = c.ORANGE_BG; badge = 'Твой ответ'; badgeColor = c.ORANGE; }
+      else if (answered) { ink = c.MUTED; }
+      return { text: o.text, pressed: mine, border: border, bg: bg, ink: ink, badge: badge, badgeColor: badgeColor, hasBadge: badge !== '',
+        pick: function () {
+          var s = self.st();
+          if (s[key] !== null && s[key] !== undefined) return;
+          var p = {}; p[key] = o.id; self.setState(p);
+        } };
+    });
+  }
+
+  picked(key) { var v = this.st()[key]; return v !== null && v !== undefined; }
+
+  okOf(key, opts) { var v = this.st()[key]; return opts.some(function (o) { return o.ok && o.id === v; }); }
+
+  money(x) { return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0') + '\u00a0₽'; }
+
+  common(screens) {
+    var self = this, st = this.st();
+    var pct = Math.round(Math.min(st.screen, screens) / screens * 100);
+    var reset = function () { self.setState(self.initial()); };
+    return {
+      inLesson: st.screen >= 1 && st.screen < screens, isStart: st.screen === 0, isDone: st.screen === screens,
+      progress: pct + '%', progressNum: pct, streak: st.screen === screens ? '8' : '7',
+      start: function () { self.setState({ screen: 1 }); },
+      next: function () { self.setState({ screen: self.st().screen + 1 }); },
+      close: reset, restart: reset
+    };
+  }
+
+  renderVals() {
+    var self = this, st = this.st(), c = this.C();
+    var base = this.common(7);
+
+    /* 1. Попробуй */
+    var P1 = [
+      { id: 'a', text: 'Право на скидку в пекарне' },
+      { id: 'b', text: 'Маленькую долю бизнеса: часть прибыли и голос на собрании владельцев', ok: true },
+      { id: 'c', text: 'Долг: пекарня вернёт ему 3 000 ₽ с процентами' }
+    ];
+    var p1ok = this.okOf('p1', P1);
+    var p1Fb = p1ok
+      ? this.fb(true, 'Верно! Тимур — совладелец', '3 акции из 10 000 — это 0,03% пекарни. Маленькая, но настоящая доля бизнеса.')
+      : this.fb(false, st.p1 === 'c' ? 'Это облигация — о ней следующий урок' : 'Скидки владельцам не положены',
+        'Акция — не долг, а доля. 3 акции из 10 000 — это 0,03% пекарни: часть её прибыли и голос на собрании владельцев.');
+
+    /* 2. Каравай */
+    var sh = st.shares, divNum = sh * 75;
+    var lvDone = divNum === 1500;
+    var setShares = function (d) {
+      var s = self.st(); var n = Math.max(0, Math.min(200, s.shares + d));
+      var crossed = s.shares <= 20 && n > 20;
+      self.setState({ shares: n, over: s.over + (crossed ? 1 : 0) });
+    };
+    var BTNS = [[-1, '−1', 'Продать одну акцию'], [1, '+1', 'Купить одну акцию'], [5, '+5', 'Купить пять акций'], [10, '+10', 'Купить десять акций']];
+    var grams = sh / 10;
+    var lv = {
+      shares: sh, cost: this.money(sh * 1000), pct: (sh / 100).toFixed(2).replace('.', ',') + '%',
+      grams: (grams === Math.floor(grams) ? grams : grams.toFixed(1).replace('.', ',')) + ' г',
+      crumb: Math.min(30, 6 + sh * 0.6) + 'px',
+      div: this.money(divNum), divBg: lvDone ? c.GREEN_BG : '#FBF7F0', divInk: lvDone ? c.GREEN : c.INK,
+      btns: BTNS.map(function (b) {
+        var minus = b[0] < 0;
+        return { label: b[1], aria: b[2], border: minus ? c.LINE : c.GREEN, bg: minus ? '#FFFFFF' : c.GREEN_BG, ink: minus ? c.INK : c.GREEN,
+          tap: function () { setShares(b[0]); } };
+      }),
+      done: lvDone, wait: !lvDone, showFb: lvDone || divNum > 1500,
+      fb: lvDone
+        ? this.fb(true, 'Ровно 1 500 ₽ в год!', '20 акций за 20 000 ₽ — это 0,2% пекарни, кусочек весом 2 грамма. Совсем крошка, а деньги настоящие.')
+        : this.note('Многовато', 'Уже ' + this.money(divNum) + ' в год. Убавь кнопкой «−1».'),
+      showHint: st.over >= 1 && !lvDone
+    };
+
+    /* 3. Откуда доход */
+    var WAYS = [
+      { title: 'Дивиденды', text: 'Часть прибыли, которую компания раздаёт владельцам. Платит, только если сама так решит: обязанности платить нет.', risk: false },
+      { title: 'Рост цены', text: 'Если бизнес растёт или от него ждут роста, акции дорожают. Их можно продать дороже, чем купил.', risk: false },
+      { title: 'Риск', text: 'Если дела пойдут плохо, цена упадёт. А если компания обанкротится, акция может обесцениться полностью.', risk: true }
+    ];
+    var ways = WAYS.map(function (w, i) {
+      var open = st.opened.indexOf(i) >= 0;
+      return { title: w.title, text: w.text, isOpen: open, hintLabel: open ? '' : 'Открыть',
+        border: open ? (w.risk ? c.ORANGE : c.GREEN) : c.LINE, bg: open ? (w.risk ? c.ORANGE_BG : c.GREEN_BG) : '#FFFFFF',
+        open: function () { var s = self.st(); if (s.opened.indexOf(i) < 0) self.setState({ opened: s.opened.concat([i]) }); } };
+    });
+    var waysAll = st.opened.length >= 3;
+
+    /* 4. Новости */
+    var NEWS = [
+      { t: '«Колосок» открыл второй цех. Продажи за квартал выросли на 30%.', up: true, from: 1000, to: 1180,
+        why: 'Больше продаж — больше будущей прибыли. За будущую прибыль и платят.' },
+      { t: 'Мука подорожала вдвое, а поднять цены на хлеб не получилось.', up: false, from: 1180, to: 1020,
+        why: 'Расходы выросли, прибыль сожмётся — акция дешевеет.' },
+      { t: 'Прибыль за год выросла на 10%. Правда, все ждали роста на 30%.', up: false, from: 1020, to: 960,
+        why: 'Хорошая новость, но хуже ожиданий. В цене уже были «заложены» +30%, и разочарование её снизило.' },
+      { t: 'Крупная сеть магазинов подписала контракт: 5 лет будет закупать хлеб «Колоска».', up: true, from: 960, to: 1100,
+        why: 'Надёжные продажи на годы вперёд — ожидания прибыли выросли.' },
+      { t: 'Объявлены дивиденды 75 ₽ на акцию. Сегодня — последний день, чтобы купить акцию и получить выплату. Что будет с ценой завтра?', up: false, from: 1100, to: 1025,
+        why: 'Это дивидендный гэп: деньги уходят из компании к владельцам, и акция дешевеет примерно на размер дивиденда.' },
+      { t: 'Рядом открылась большая сетевая пекарня с низкими ценами.', up: false, from: 1025, to: 940,
+        why: 'Конкурент заберёт часть покупателей — прибыль «Колоска» под угрозой.' }
+    ];
+    var i = Math.min(st.sw, 5), n = NEWS[i], ans = st.swAns[i];
+    var right = st.swAns.filter(function (a, k) { return a !== null && a === NEWS[k].up; }).length;
+    var answered = ans !== null;
+    var finished = st.swAns.every(function (a) { return a !== null; });
+    var answer = function (up) {
+      return function () {
+        var s = self.st(); var k = Math.min(s.sw, 5);
+        if (s.swAns[k] !== null) return;
+        var a = s.swAns.slice(); a[k] = up; self.setState({ swAns: a });
+      };
+    };
+    var sw = {
+      num: i + 1, right: right, text: n.t,
+      price: answered ? this.money(n.from) + ' → ' + this.money(n.to) : this.money(n.from),
+      priceInk: answered ? (n.up ? c.GREEN : c.ORANGE) : c.INK,
+      tilt: answered ? (n.up ? '1.5deg' : '-1.5deg') : '0deg',
+      asking: !answered, answered: answered,
+      fb: answered ? this.fb(ans === n.up, ans === n.up ? (n.up ? 'Верно — дороже' : 'Верно — дешевле') : (n.up ? 'Нет — дороже' : 'Нет — дешевле'), n.why) : this.note('', ''),
+      canNext: answered && st.sw < 5, finished: finished,
+      sum: this.fb(right >= 4, 'Угадано ' + right + ' из 6',
+        'За год цена прошла путь 1 000 → 940 ₽: минус 6%. Но владельцы получили 75 ₽ дивидендов. Итог: +15 ₽ на акцию, то есть +1,5%. Доход от акции — это цена плюс дивиденды.'),
+      up: answer(true), down: answer(false),
+      nextCard: function () { var s = self.st(); if (s.sw < 5) self.setState({ sw: s.sw + 1 }); }
+    };
+
+    /* 5. Пары */
+    var TERMS = ['Акция', 'Дивиденд', 'Акционер', 'Гэп'];
+    var DEFS = [[1, 'Часть прибыли, которую выплачивают владельцам'], [3, 'Падение цены после того, как закрылся список на выплату дивидендов'], [0, 'Доля в бизнесе'], [2, 'Владелец акций']];
+    var pDoneAll = st.pDone.length === 4;
+    var pairs = {
+      terms: TERMS.map(function (t, k) {
+        var done = st.pDone.indexOf(k) >= 0, sel = st.pSel === k, wrong = st.pWrong && st.pWrong.t === k;
+        return { text: t, sel: sel,
+          border: done ? c.GREEN : (wrong ? c.ORANGE : (sel ? c.BLUE : c.LINE)), bg: done ? c.GREEN_BG : (wrong ? c.ORANGE_BG : (sel ? c.BLUE_BG : '#FFFFFF')),
+          ink: done ? c.GREEN : c.INK,
+          tap: function () { var s = self.st(); if (s.pDone.indexOf(k) >= 0) return; self.setState({ pSel: k, pWrong: null }); } };
+      }),
+      defs: DEFS.map(function (d) {
+        var k = d[0], done = st.pDone.indexOf(k) >= 0, wrong = st.pWrong && st.pWrong.d === k;
+        return { text: d[1], border: done ? c.GREEN : (wrong ? c.ORANGE : c.LINE), bg: done ? c.GREEN_BG : (wrong ? c.ORANGE_BG : '#FFFFFF'),
+          ink: done ? c.GREEN : c.INK, anim: wrong ? 'fzwob .35s ease' : 'none',
+          tap: function () {
+            var s = self.st();
+            if (s.pDone.indexOf(k) >= 0 || s.pSel === null) return;
+            if (s.pSel === k) self.setState({ pDone: s.pDone.concat([k]), pSel: null, pWrong: null });
+            else self.setState({ pWrong: { t: s.pSel, d: k }, pMiss: s.pMiss + 1, pSel: null });
+          } };
+      }),
+      done: pDoneAll, wait: !pDoneAll, showFb: pDoneAll || !!st.pWrong,
+      fb: pDoneAll ? this.fb(true, st.pMiss === 0 ? 'Все пары с первого раза!' : 'Все пары собраны', 'Эти четыре слова встретятся в любом приложении брокера.')
+        : this.fb(false, 'Не эта пара', 'Выбери слово ещё раз и попробуй другое объяснение.'),
+      showHint: st.pMiss >= 2 && !pDoneAll
+    };
+
+    /* 6. Примени */
+    var CHIPS = ['Продуктовая сеть', 'Мобильная связь', 'Банк', 'Заправки', 'Маркетплейс', 'Такси и доставка'];
+    var mineChips = CHIPS.map(function (t, k) {
+      var on = st.mine[k];
+      return { text: t, on: on, border: on ? c.GREEN : c.LINE, bg: on ? c.GREEN_BG : '#FFFFFF',
+        toggle: function () { var a = self.st().mine.slice(); a[k] = !a[k]; self.setState({ mine: a }); } };
+    });
+    var mineAny = st.mine.some(function (x) { return x; });
+    var P6 = [
+      { id: 'a', text: 'Да, раз её все любят' },
+      { id: 'b', text: 'Не обязательно: то, что её любят, уже может быть «заложено» в цену', ok: true }
+    ];
+    var p6ok = this.okOf('p6', P6);
+    var p6Fb = this.fb(p6ok, p6ok ? 'Именно' : 'Не обязательно',
+      'Цена растёт, когда дела оказываются лучше ожиданий. Если все и так уверены в успехе, цена это уже учла. «Пользуюсь — значит, куплю» — слабая причина.');
+
+    var score = (p1ok ? 1 : 0) + (right >= 4 ? 1 : 0) + (st.pMiss === 0 && pDoneAll ? 1 : 0) + (p6ok ? 1 : 0);
+    return Object.assign(base, {
+      hello: 'Сегодня ты станешь совладельцем пекарни. Совсем чуть-чуть!',
+      isPredict: st.screen === 1, isLoaf: st.screen === 2, isWays: st.screen === 3, isSwipe: st.screen === 4,
+      isPairs: st.screen === 5, isApply: st.screen === 6,
+      p1Opts: this.choice('p1', P1), p1Done: this.picked('p1'), p1Wait: !this.picked('p1'), p1Fb: p1Fb,
+      lv: lv, ways: ways, waysAll: waysAll, waysWait: !waysAll, sw: sw, pairs: pairs,
+      mineChips: mineChips, mineAny: mineAny, p6Opts: this.choice('p6', P6), p6Done: this.picked('p6'), p6Wait: !this.picked('p6'), p6Fb: p6Fb,
+      doneSub: 'Новостей угадано: ' + right + ' из 6.', score: score, total: 4
+    });
+  }
+}
+</script>
+</body>
+</html>
+
